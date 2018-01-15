@@ -3,15 +3,19 @@ package com.example.administrator.myapplication.spp;
 import android.bluetooth.BluetoothA2dp;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothHeadset;
 import android.bluetooth.BluetoothManager;
 import android.bluetooth.BluetoothProfile;
 import android.bluetooth.BluetoothServerSocket;
 import android.bluetooth.BluetoothSocket;
 import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.Message;
 import android.util.Log;
+
+import com.yanzhenjie.permission.Permission;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -45,17 +49,18 @@ public class SppManager {
     private AcceptThread mInsecureAcceptThread;
     private ConnectThread mConnectThread;
     private ConnectedThread mConnectedThread;
+    private AudioManager mAudioManager;
 
     private static SppManager mInstance;
 
 
     public static SppManager getInstance(Context mContext) {
         if (mInstance == null) {
-//            synchronized (SppManager.class) {
-            if (mInstance == null) {
-                mInstance = new SppManager(mContext);
+            synchronized (SppManager.class) {
+                if (mInstance == null) {
+                    mInstance = new SppManager(mContext);
 
-//                }
+                }
             }
         }
         return mInstance;
@@ -65,6 +70,7 @@ public class SppManager {
     private SppManager(Context mContext) {
         this.mContext = mContext;
         mSppAdapter = BluetoothAdapter.getDefaultAdapter();
+        mAudioManager = (AudioManager) mContext.getSystemService(Context.AUDIO_SERVICE);
     }
 
     public boolean deviceSupportBluetooth() {
@@ -470,7 +476,7 @@ public class SppManager {
     }
 
     /**
-     * Start the ConnectThread to initiate a connection to a remote device.
+     * 连接蓝牙设备
      *
      * @param device The BluetoothDevice to connect
      */
@@ -498,87 +504,193 @@ public class SppManager {
     }
 
     /**
-     * Write to the ConnectedThread in an unsynchronized manner
+     * 写数据
      *
      * @param out The bytes to write
      * @see ConnectedThread#write(byte[])
      */
     public void write(byte[] out) {
-        // Create temporary object
         ConnectedThread r;
-        // Synchronize a copy of the ConnectedThread
         synchronized (this) {
             if (mState != STATE_CONNECTED) return;
             r = mConnectedThread;
         }
-//        for (int i = 0; i < out.length; i++)
-//            Log.e(TAG, "songjian send spp:" + Integer.toHexString((byte) out[i]));
-        Log.e(TAG, "songjian send lenth:" + out.length);
-        // Perform the write unsynchronized
         r.write(out);
     }
 
 
-    //////蓝牙耳机///////////////////////////////////////////////////////////////////
-    private BluetoothA2dp mBluetoothA2dp;
-
-    public void deviceSetA2DPProfile() {
-        setA2DPProfile(mSppAdapter);
-    }
-
-
-    /***
-     * A2DP connect
-     * @param mDevice bluetooth device
-     */
-    public void connectA2DP(BluetoothDevice mDevice) {
-        connectA2dp(mDevice);
-    }
-
-
-    private void setA2DPProfile(BluetoothAdapter mAdapter) {
-        //获取A2DP代理对象
-        mAdapter.getProfileProxy(mContext, mServiceListener, BluetoothProfile.A2DP);
-    }
-
-    private void connectA2dp(BluetoothDevice device) {
-        setPriority(device, 100); //设置priority
-        try {
-            //通过反射获取BluetoothA2dp中connect方法（hide的），进行连接。
-            Method connectMethod = BluetoothA2dp.class.getMethod("connect",
-                    BluetoothDevice.class);
-            connectMethod.invoke(mBluetoothA2dp, device);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-
-    private BluetoothProfile.ServiceListener mServiceListener = new BluetoothProfile.ServiceListener() {
-        @Override
-        public void onServiceConnected(int profile, BluetoothProfile proxy) {
-            if (profile == BluetoothProfile.A2DP) {
-                mBluetoothA2dp = (BluetoothA2dp) proxy;
-            }
-        }
-
-        @Override
-        public void onServiceDisconnected(int profile) {
-            if (profile == BluetoothProfile.A2DP) {
-                mBluetoothA2dp = null;
-            }
-        }
-    };
-
-    public void setPriority(BluetoothDevice device, int priority) {
-        if (mBluetoothA2dp == null) return;
-        try {//通过反射获取BluetoothA2dp中setPriority方法（hide的），设置优先级
-            Method connectMethod = BluetoothA2dp.class.getMethod("setPriority",
-                    BluetoothDevice.class, int.class);
-            connectMethod.invoke(mBluetoothA2dp, device, priority);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+//    //////蓝牙耳机///////////////////////////////////////////////////////////////////
+////    public BluetoothA2dp mBluetoothA2dp;
+//    public BluetoothHeadset mBluetoothHeadset;
+//
+////    /**
+////     * 获取A2DP代理对象
+////     */
+////    public void deviceSetA2DPProfile() {
+////        setA2DPProfile(mSppAdapter);
+////    }
+//
+//    /**
+//     * 获取Headset代理对象
+//     */
+//    public void deviceSetHeadsetProfile() {
+//        setHeadsetProfile(mSppAdapter);
+//    }
+////
+////    /***
+////     * A2DP connect
+////     * @param mDevice bluetooth device
+////     */
+////    public void connectA2DP(BluetoothDevice mDevice) {
+////        connectA2dp(mDevice);
+////    }
+//
+//    /**
+//     * 开启SCO
+//     */
+//    public void deviceStartSCO() {
+//        startBluetoothEar();
+//    }
+//
+//    /**
+//     * 停止SCO
+//     */
+//    public void deviceStopSCO() {
+//        stopBluetoothEar();
+//    }
+//
+//
+////    private void setA2DPProfile(BluetoothAdapter mAdapter) {
+////        //获取A2DP代理对象
+////        mAdapter.getProfileProxy(mContext, mA2DPServiceListener, BluetoothProfile.A2DP);
+////    }
+//
+//    private void setHeadsetProfile(BluetoothAdapter mAdapter) {
+//        mAdapter.getProfileProxy(mContext, mHeadsetServiceListener, BluetoothProfile.HEADSET);
+//    }
+//
+//
+////    /**
+////     * 连接蓝牙耳机
+////     */
+////    private void connectA2dp(BluetoothDevice device) {
+////        setPriority(device, 100); //设置priority
+////        try {
+////            //通过反射获取BluetoothA2dp中connect方法（hide的），进行连接。
+////            Method connectMethod = BluetoothA2dp.class.getMethod("connect",
+////                    BluetoothDevice.class);
+////            connectMethod.invoke(mBluetoothA2dp, device);
+////        } catch (Exception e) {
+////            e.printStackTrace();
+////        }
+////    }
+////
+////    /**
+////     * 连接BluetoothA2DP代理对象，使用蓝牙耳机播放
+////     */
+////    private BluetoothProfile.ServiceListener mA2DPServiceListener = new BluetoothProfile.ServiceListener() {
+////        @Override
+////        public void onServiceConnected(int profile, BluetoothProfile proxy) {
+////            if (profile == BluetoothProfile.A2DP) {
+////                mBluetoothA2dp = (BluetoothA2dp) proxy;
+////            }
+////        }
+////
+////        @Override
+////        public void onServiceDisconnected(int profile) {
+////            if (profile == BluetoothProfile.A2DP) {
+////                mBluetoothA2dp = null;
+////            }
+////        }
+////    };
+//
+//    public boolean deviceIsSCOConnected(BluetoothDevice mDevice) {
+//        return isSCOPermission(mDevice);
+//    }
+//
+//    public int deviceIsSCO(BluetoothDevice mDevice) {
+//        return isSCO(mDevice);
+//    }
+//
+//
+//    /**
+//     * 连接BluetoothHeadset代理对象，使用蓝牙耳机录音
+//     */
+//    private BluetoothProfile.ServiceListener mHeadsetServiceListener = new BluetoothProfile.ServiceListener() {
+//        @Override
+//        public void onServiceConnected(int profile, BluetoothProfile proxy) {
+//            if (profile == BluetoothProfile.HEADSET) {
+//                mBluetoothHeadset = (BluetoothHeadset) proxy;
+//            }
+//        }
+//
+//        @Override
+//        public void onServiceDisconnected(int profile) {
+//            if (profile == BluetoothProfile.HEADSET) {
+//                mBluetoothHeadset = null;
+//            }
+//        }
+//    };
+//
+////    /**
+////     * 设置优先级
+////     */
+////    public void setPriority(BluetoothDevice device, int priority) {
+////        if (mBluetoothA2dp == null) return;
+////        try {//通过反射获取BluetoothA2dp中setPriority方法（hide的），设置优先级
+////            Method connectMethod = BluetoothA2dp.class.getMethod("setPriority",
+////                    BluetoothDevice.class, int.class);
+////            connectMethod.invoke(mBluetoothA2dp, device, priority);
+////        } catch (Exception e) {
+////            e.printStackTrace();
+////        }
+////    }
+//
+//
+//    /**
+//     * 开启蓝牙耳机播放录音
+//     */
+//    private void startBluetoothEar() {
+////        if (this.mState == STATE_CONNECTED) {
+//        mAudioManager.setMode(AudioManager.MODE_IN_COMMUNICATION);
+//        mAudioManager.startBluetoothSco();
+//        mAudioManager.setBluetoothScoOn(true);
+//        mAudioManager.setSpeakerphoneOn(false);
+//
+////        }
+//    }
+//
+//    /**
+//     * 关闭蓝牙耳机播放录音
+//     */
+//    private void stopBluetoothEar() {
+////        if (this.mState == STATE_NONE) {
+//        mAudioManager.setMode(AudioManager.MODE_NORMAL);
+//        mAudioManager.stopBluetoothSco();
+//        mAudioManager.setBluetoothScoOn(false);
+//        mAudioManager.setSpeakerphoneOn(true);
+//
+////        }
+//    }
+//
+//    private boolean isSCOPermission(BluetoothDevice mDevice) {
+//        return mBluetoothHeadset.isAudioConnected(mDevice);
+////        return mBluetoothHeadset.getConnectionState(mDevice);
+//    }
+//
+//    private int isSCO(BluetoothDevice mDevice) {
+////        return mBluetoothHeadset.isAudioConnected(mDevice);
+//        return mBluetoothHeadset.getConnectionState(mDevice);
+//
+//    }
+//
+//    public void audioManagerState() {
+//        Log.e(TAG, "get ringer mode : " + mAudioManager.getRingerMode());
+//        Log.e(TAG, "is bluetooth sco on : " + mAudioManager.isBluetoothScoOn());
+//        Log.e(TAG, "is speaker phone on : " + mAudioManager.isSpeakerphoneOn());
+//        Log.e(TAG, "get mode : " + mAudioManager.getMode());
+//        Log.e(TAG, "is bluetooth sco availableoffcall : " + mAudioManager.isBluetoothScoAvailableOffCall());
+//        Log.e(TAG, "is bluetooth a2dp on : " + mAudioManager.isBluetoothA2dpOn());
+//    }
 
 }

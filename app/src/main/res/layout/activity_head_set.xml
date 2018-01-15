@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="19dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="18dp"
         android:text="open" />
 
@@ -24,4 +24,12 @@
         android:layout_alignTop="@+id/open"
         android:layout_marginEnd="37dp"
         android:text="stop" />
+
+    <Button
+        android:id="@+id/sco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/open"
+        android:layout_centerHorizontal="true"
+        android:text="sco" />
 </RelativeLayout>
