@@ -32,4 +32,21 @@
         android:layout_alignTop="@+id/open"
         android:layout_centerHorizontal="true"
         android:text="sco" />
+
+    <Button
+        android:id="@+id/btrecoder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/open"
+        android:layout_below="@+id/open"
+        android:layout_marginTop="161dp"
+        android:text="btRecoder" />
+
+    <Button
+        android:id="@+id/btplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/stop"
+        android:layout_alignTop="@+id/btrecoder"
+        android:text="btplay" />
 </RelativeLayout>

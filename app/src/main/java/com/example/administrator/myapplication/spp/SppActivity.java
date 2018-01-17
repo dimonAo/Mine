@@ -36,8 +36,10 @@ public class SppActivity extends AppCompatActivity {
     private ListView device_list;
     private DeviceAdapter mDeviceAdapter;
 
-    private SppManager mSppManager;
-
+    //    private SppManager mSppManager;
+    private SppBluetoothManager mSppManager;
+    //    private static final UUID CONNECT_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
+    private static final UUID CONNECT_UUID = UUID.fromString("00000000-0000-0000-0099-aabbccddeeff");
 
     private static final int ENABLE_BLUETOOTH_REQUEST = 0x01;
 
@@ -45,11 +47,51 @@ public class SppActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spp);
-        mSppManager =SppManager.getInstance(this);
+        mSppManager = SppBluetoothManager.getInstance(this);
+//        mSppManager.setConnectUUid(CONNECT_UUID);
+        mSppManager.setBluetoothListener(new SppBluetoothManager.BluetoothListener() {
+            @Override
+            public void notifyChangeConnectstate(int mState) {
+                Log.e(TAG, "notigy change connect state : " + mState);
+                if (mState == SppBluetoothManager.STATE_CONNECTED) {
+                    Intent intent = new Intent(SppActivity.this, MessageActivity.class);
+                    startActivity(intent);
+                }
+            }
+
+            @Override
+            public void foundBluetoothDevice(BluetoothDevice mDevice) {
+                Log.e(TAG, "" + mDevice.getName() + " " + mDevice.getAddress());
+                for (int i = 0; i < mDevices.size(); i++) {
+                    if (mDevice.getAddress().equals(mDevices.get(i).getAddress())) {
+//                            mDevices.set(i, device);
+                        return;
+                    }
+                }
+                mDevices.add(mDevice);
+                mDeviceAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void scanBluetoothFinish() {
+                Log.e(TAG, "scan finish");
+            }
+
+        });
 
         initView();
 
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (mSppManager != null) {
+            if (mSppManager.getState() == SppBluetoothManager.STATE_NONE) {
+                mSppManager.start();
+            }
+        }
     }
 
     @Override
@@ -63,6 +105,7 @@ public class SppActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         unregisterBluetoothReceiver();
+        mSppManager.stop();
     }
 
     private void initView() {
@@ -75,12 +118,12 @@ public class SppActivity extends AppCompatActivity {
         mDeviceAdapter = new DeviceAdapter(this, mDevices);
         device_list.setAdapter(mDeviceAdapter);
 
-        if (!mSppManager.deviceSupportBluetooth()) {
+        if (!mSppManager.supportBluetooth()) {
             Log.e(TAG, "this device not support bluetooth");
             finish();
         }
 
-        if (!mSppManager.deviceEnableBluetooth()) {
+        if (!mSppManager.enableBluetooth()) {
             Intent intent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(intent, ENABLE_BLUETOOTH_REQUEST);
         }
@@ -111,30 +154,29 @@ public class SppActivity extends AppCompatActivity {
                 mDeviceAdapter.notifyDataSetChanged();
 
 //                mSppManager.deviceEnableBluetoothDiscovery(0);
-                mSppManager.deviceStartDiscovery();
+                mSppManager.startDiscovery();
             }
         });
 
         btn_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mSppManager.deviceCancelDiscovery();
+                mSppManager.stopDiscovery();
             }
         });
 
         device_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                mSppManager.deviceCancelDiscovery();
+                mSppManager.stopDiscovery();
                 BluetoothDevice currentDevice = mDevices.get(position);
 //                if (mSppManager.createBond(currentDevice)) {
 //                    Log.e(TAG, "current device is bond");
 //                mSppManager.connect(currentDevice);
 
 
-                Intent intent = new Intent(SppActivity.this, MessageActivity.class);
-                intent.putExtra("device_mac", currentDevice.getAddress());
-                startActivity(intent);
+//
+                mSppManager.connect(currentDevice);
 
 
 //                }
@@ -242,18 +284,18 @@ public class SppActivity extends AppCompatActivity {
     };
 
     private void registerBluetoothReciver() {
-        IntentFilter foundFilter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
-        foundFilter.addAction(BluetoothDevice.ACTION_BOND_STATE_CHANGED);
-        foundFilter.addAction(BluetoothAdapter.ACTION_CONNECTION_STATE_CHANGED);
-        registerReceiver(mReceiver, foundFilter);
-
-        IntentFilter finishFilter = new IntentFilter(BluetoothAdapter.ACTION_DISCOVERY_FINISHED);
-        registerReceiver(mReceiver, finishFilter);
+//        IntentFilter foundFilter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
+//        foundFilter.addAction(BluetoothDevice.ACTION_BOND_STATE_CHANGED);
+//        foundFilter.addAction(BluetoothAdapter.ACTION_CONNECTION_STATE_CHANGED);
+//        registerReceiver(mReceiver, foundFilter);
+//
+//        IntentFilter finishFilter = new IntentFilter(BluetoothAdapter.ACTION_DISCOVERY_FINISHED);
+//        registerReceiver(mReceiver, finishFilter);
     }
 
 
     private void unregisterBluetoothReceiver() {
-        unregisterReceiver(mReceiver);
+//        unregisterReceiver(mReceiver);
     }
 
 

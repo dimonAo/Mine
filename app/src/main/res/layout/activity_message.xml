@@ -31,4 +31,15 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:text="reconnect" />
+
+    <ListView
+        android:id="@+id/in"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/edit"
+        android:layout_below="@+id/reconnect" />
 </RelativeLayout>

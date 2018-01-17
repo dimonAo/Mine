@@ -31,7 +31,7 @@ public class HeadSetActivity extends AppCompatActivity {
     private static final String TAG = "HeadSetActivity";
     private static final String CURRENT_DEVICE_ADDRESS = "00:00:00:FE:E4:DA";
 
-    private Button open, stop, sco;
+    private Button open, stop, sco, btrecoder, btplay;
     private SppManager mSppManager;
     private BluetoothAdapter mAdapter;
     private BluetoothHeadset mBluetoothHeadset;
@@ -41,7 +41,8 @@ public class HeadSetActivity extends AppCompatActivity {
     private MediaRecorder mRecorder;
     private static String mFileName = "";
     private AudioManager mAudioManager;
-    private boolean openMedia = true;
+    private boolean openMedia = true,openBlue = true;
+    private AudioMediaPlayManager mManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +52,7 @@ public class HeadSetActivity extends AppCompatActivity {
         mFileName += "/btrecorder.3gp";
         mSppManager = SppManager.getInstance(this);
         mAdapter = mSppManager.mSppAdapter;
+        mManager = AudioMediaPlayManager.getAudioMediaPlayManager(this);
 
         mPlayer = new MediaPlayer();
         mRecorder = new MediaRecorder();
@@ -58,6 +60,8 @@ public class HeadSetActivity extends AppCompatActivity {
         open = findViewById(R.id.open);
         stop = findViewById(R.id.stop);
         sco = findViewById(R.id.sco);
+        btrecoder = findViewById(R.id.btrecoder);
+        btplay = findViewById(R.id.btplay);
 
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 //        if (mSppManager.mBluetoothHeadset == null) {
@@ -69,9 +73,13 @@ public class HeadSetActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (openMedia) {
-                    startRecording();
+//                    startRecording();
+                    openMedia = false;
+                    mManager.startRecorderUsePhone(mFileName);
                 } else {
-                    stopRecording();
+                    openMedia = true;
+//                    stopRecording();
+                    mManager.stopRecorderUsePhone();
                 }
 
             }
@@ -87,8 +95,8 @@ public class HeadSetActivity extends AppCompatActivity {
 //                        mSppManager.deviceStopSCO();
 //                    }
 //                }
-                startPlaying();
-
+//                startPlaying();
+                mManager.startPlayingUsePhone(mFileName);
 
             }
         });
@@ -103,6 +111,26 @@ public class HeadSetActivity extends AppCompatActivity {
             }
         });
 
+
+        btrecoder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(openBlue) {
+                    openBlue = false;
+                    mManager.startRecorderUseBluetoothEar(mFileName);
+                }else{
+                    openBlue = true;
+                    mManager.stopRecorderUseBluetoothEar();
+                }
+            }
+        });
+
+        btplay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mManager.startPlayingUseBluetoothEar(mFileName);
+            }
+        });
 
     }
 
