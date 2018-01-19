@@ -12,33 +12,42 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="19dp"
         android:text="discovery" />
 
     <Button
         android:id="@+id/cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/device_list"
-        android:layout_marginStart="13dp"
         android:layout_toEndOf="@+id/discovery"
         android:text="cancel" />
+
+
+    <Button
+        android:id="@+id/bonded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/cancel"
+        android:text="bonded" />
+
+    <Button
+        android:id="@+id/audio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/bonded"
+        android:text="audio" />
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/discovery" />
 
     <ListView
         android:id="@+id/device_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/discovery"
+        android:layout_below="@+id/edit"
         android:layout_marginTop="26dp" />
-
-    <Button
-        android:id="@+id/bonded"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/device_list"
-        android:layout_marginStart="13dp"
-        android:layout_toEndOf="@+id/cancel"
-        android:text="bonded" />
 </RelativeLayout>

@@ -3,9 +3,11 @@ package com.example.administrator.myapplication.spp;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.TextureView;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -60,8 +62,9 @@ public class MessageActivity extends AppCompatActivity implements TranProtocalAn
                     return;
                 }
 //                mSppmanager.write(msg.getBytes());
-                mTranProtocalAnalysis.writeToDevice(msg);
-                mConversationArrayAdapter.add("ME : " + msg);
+                String ss = "{\"src\":\"zh-CN\",\"des\":\"en-US\",\"rec\":\"今天天气不错。\",\"tra\":\"Today's weather is fine.\"}";
+                mTranProtocalAnalysis.writeToDevice(ss);
+//                mConversationArrayAdapter.add("ME : " + msg);
 
             }
         });
@@ -91,7 +94,7 @@ public class MessageActivity extends AppCompatActivity implements TranProtocalAn
 
     @Override
     public void onDevicePressedStateListener(int type) {
-
+        Log.e("device button : ", "" + type);
     }
 
     @Override

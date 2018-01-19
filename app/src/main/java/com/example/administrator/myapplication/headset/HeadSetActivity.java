@@ -4,7 +4,6 @@ import android.bluetooth.BluetoothA2dp;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothHeadset;
-import android.bluetooth.BluetoothProfile;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -19,6 +18,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.administrator.myapplication.headset.newmanager.AudioMediaPlayManager;
 import com.example.administrator.myapplication.R;
 import com.example.administrator.myapplication.spp.SppManager;
 
@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class HeadSetActivity extends AppCompatActivity {
+public class HeadSetActivity extends AppCompatActivity implements AudioStateChange {
     private static final String TAG = "HeadSetActivity";
     private static final String CURRENT_DEVICE_ADDRESS = "00:00:00:FE:E4:DA";
 
@@ -39,21 +39,21 @@ public class HeadSetActivity extends AppCompatActivity {
 
     private MediaPlayer mPlayer;
     private MediaRecorder mRecorder;
-    private static String mFileName = "";
+    private static String mFileName = Environment.getExternalStorageDirectory().getAbsolutePath() + "/btrecorder.3gp";
     private AudioManager mAudioManager;
-    private boolean openMedia = true,openBlue = true;
+    private boolean openMedia = true, openBlue = true;
     private AudioMediaPlayManager mManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_head_set);
-        mFileName = Environment.getExternalStorageDirectory().getAbsolutePath();
-        mFileName += "/btrecorder.3gp";
+//        mFileName = Environment.getExternalStorageDirectory().getAbsolutePath();
+//        mFileName += ;
         mSppManager = SppManager.getInstance(this);
         mAdapter = mSppManager.mSppAdapter;
         mManager = AudioMediaPlayManager.getAudioMediaPlayManager(this);
-
+        mManager.setAudioStateChange(this);
         mPlayer = new MediaPlayer();
         mRecorder = new MediaRecorder();
 
@@ -115,10 +115,10 @@ public class HeadSetActivity extends AppCompatActivity {
         btrecoder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(openBlue) {
+                if (openBlue) {
                     openBlue = false;
                     mManager.startRecorderUseBluetoothEar(mFileName);
-                }else{
+                } else {
                     openBlue = true;
                     mManager.stopRecorderUseBluetoothEar();
                 }
@@ -268,4 +268,56 @@ public class HeadSetActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onStartRecoderUseBluetoothEar() {
+        Log.e(TAG, "play onStartRecoderUseBluetoothEar");
+    }
+
+    @Override
+    public void onStopRecoderUseBluetoothEar() {
+        Log.e(TAG, "play onStopRecoderUseBluetoothEar");
+    }
+
+    @Override
+    public void onStartPlayUseBluetoothEar() {
+        Log.e(TAG, "play onStartPlayUseBluetoothEar");
+    }
+
+    @Override
+    public void onStopPlayuseBluetoothEar() {
+        Log.e(TAG, "play onStopPlayuseBluetoothEar");
+    }
+
+    @Override
+    public void onStartRecoderUsePhone() {
+        Log.e(TAG, "play onStartRecoderUsePhone");
+    }
+
+    @Override
+    public void onStopRecoderUsePhone() {
+        Log.e(TAG, "play onStopRecoderUsePhone");
+    }
+
+    @Override
+    public void onStartPlayUsePhone() {
+        Log.e(TAG, "play onStartPlayUsePhone");
+    }
+
+    @Override
+    public void onStopPlayUsePhone() {
+        Log.e(TAG, "play onStopPlayUsePhone");
+    }
+
+    @Override
+    public void onPlayCompletion() {
+        Log.e(TAG, "play completion");
+        openBlue = true;
+        mManager.stopRecorderUseBluetoothEar();
+
+    }
+
+    @Override
+    public void onPlayError() {
+        Log.e(TAG, "play error");
+    }
 }

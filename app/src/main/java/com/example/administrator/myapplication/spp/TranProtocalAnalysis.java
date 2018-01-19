@@ -28,6 +28,7 @@ public class TranProtocalAnalysis implements SppBluetoothManager.BluetoothReceiv
     private static final int PACKAGE_LENGTH = 12;
     private static TranProtocalAnalysis mAnalysis;
     private Context mContext;
+    private SppBluetoothManager mSppBluetoothmanager;
 
     /**
      * 每次接收数据时计数
@@ -63,7 +64,8 @@ public class TranProtocalAnalysis implements SppBluetoothManager.BluetoothReceiv
 
     private TranProtocalAnalysis(Context mContext) {
         this.mContext = mContext;
-        SppBluetoothManager.getInstance(mContext).setBluetoothReceiverMessageListener(this);
+        mSppBluetoothmanager = SppBluetoothManager.getInstance(mContext);
+        mSppBluetoothmanager.setBluetoothReceiverMessageListener(this);
     }
 
     /**
@@ -128,14 +130,17 @@ public class TranProtocalAnalysis implements SppBluetoothManager.BluetoothReceiv
 
         if (0x63 == checkDigit) {
             //按键指令
+            Log.e(TAG, "checkDigit : " + checkDigit);
             if (buttonDigit == 0x84) {
                 //F2按键
                 if (pressed(buttonPressDigit)) {
                     //F2按下
+                    Log.e(TAG, "F2 p : " + checkDigit);
                     mHandler.removeMessages(BUTTON_F2_PRESSED);
                     mHandler.obtainMessage(BUTTON_F2_PRESSED).sendToTarget();
                 } else {
                     //F2松开
+                    Log.e(TAG, "F2 r : " + checkDigit);
                     mHandler.removeMessages(BUTTON_F2_RELEASED);
                     mHandler.obtainMessage(BUTTON_F2_RELEASED).sendToTarget();
                 }
@@ -144,11 +149,13 @@ public class TranProtocalAnalysis implements SppBluetoothManager.BluetoothReceiv
                 //F3按键
                 if (pressed(buttonPressDigit)) {
                     //F3按下
+                    Log.e(TAG, "F3 p : " + checkDigit);
                     mHandler.removeMessages(BUTTON_F3_PRESSED);
                     mHandler.obtainMessage(BUTTON_F3_PRESSED).sendToTarget();
 
                 } else {
                     //F3松开
+                    Log.e(TAG, "F3 r : " + checkDigit);
                     mHandler.removeMessages(BUTTON_F3_RELEASED);
                     mHandler.obtainMessage(BUTTON_F3_RELEASED).sendToTarget();
                 }
@@ -215,7 +222,7 @@ public class TranProtocalAnalysis implements SppBluetoothManager.BluetoothReceiv
     public void writeToDevice(String msg) {
         List<byte[]> needList = dividedAndCombineString(msg);
         for (int i = 0; i < needList.size(); i++) {
-            SppBluetoothManager.getInstance(mContext).write(needList.get(i));
+            mSppBluetoothmanager.write(needList.get(i));
         }
     }
 
@@ -233,7 +240,7 @@ public class TranProtocalAnalysis implements SppBluetoothManager.BluetoothReceiv
         bytes[0] = (byte) 0x01;
         bytes[1] = (byte) 0x00;
         bytes[2] = (byte) 0xFC;
-        bytes[3] = (byte) (datas.length);
+        bytes[3] = (byte) (datas.length + 2);
         bytes[4] = (byte) 0x01;
         bytes[5] = (byte) 0x52;
         for (int i = 0; i < datas.length; i++) {
@@ -253,7 +260,7 @@ public class TranProtocalAnalysis implements SppBluetoothManager.BluetoothReceiv
             return null;
         List<byte[]> list = new ArrayList<>();
         byte[] bytes = msg.getBytes();
-        Log.e(TAG, "bytes:" + Arrays.toString(bytes));
+//        Log.e(TAG, "bytes:" + Arrays.toString(bytes));
 
         if (bytes.length <= PACKAGE_LENGTH) {
             byte[] temp = new byte[bytes.length + 2];
@@ -264,7 +271,7 @@ public class TranProtocalAnalysis implements SppBluetoothManager.BluetoothReceiv
             }
 
             list.add(addHeadData(temp));
-            Log.e(TAG, "temp : " + Arrays.toString(list.get(0)));
+//            Log.e(TAG, "temp : " + Arrays.toString(list.get(0)));
             return list;
         } else {
             int count = bytes.length / PACKAGE_LENGTH;
@@ -278,7 +285,7 @@ public class TranProtocalAnalysis implements SppBluetoothManager.BluetoothReceiv
                 temp[1] = (byte) i;
                 for (int j = 0; j < PACKAGE_LENGTH; j++) {
                     temp[j + 2] = bytes[i * PACKAGE_LENGTH + j];
-                    Log.e(TAG, "temp" + i + ":" + Integer.toHexString((byte) temp[j + 2]));
+//                    Log.e(TAG, "temp" + i + ":" + Integer.toHexString((byte) temp[j + 2]));
                 }
                 list.add(addHeadData(temp));
             }
@@ -288,7 +295,7 @@ public class TranProtocalAnalysis implements SppBluetoothManager.BluetoothReceiv
                 temp[1] = (byte) (count_fix - 1);
                 for (int j = 0; j < sing; j++) {
                     temp[j + 2] = bytes[count * PACKAGE_LENGTH + j];
-                    Log.e(TAG, "temp" + (count_fix - 1) + ":" + Integer.toHexString((byte) temp[j + 2]));
+//                    Log.e(TAG, "temp" + (count_fix - 1) + ":" + Integer.toHexString((byte) temp[j + 2]));
                 }
                 list.add(addHeadData(temp));
             }

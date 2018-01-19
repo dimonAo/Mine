@@ -17,7 +17,6 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.VIBRATE" />
-
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.BROADCAST_STICKY" />
@@ -43,6 +42,8 @@
         <activity android:name=".camera.CameraActivity" />
         <activity android:name=".spp.MessageActivity" />
         <activity android:name=".headset.HeadSetActivity" />
+        <activity android:name=".inputkeybroad.InputMethodActivity" />
+        <activity android:name=".ble.BleScanActivity" />
     </application>
 
 </manifest>

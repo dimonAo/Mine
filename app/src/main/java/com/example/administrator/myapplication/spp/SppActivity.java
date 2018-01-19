@@ -7,17 +7,21 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.os.ParcelUuid;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import com.example.administrator.myapplication.R;
+import com.example.administrator.myapplication.headset.HeadSetActivity;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -25,13 +29,15 @@ import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
-public class SppActivity extends AppCompatActivity {
+public class SppActivity extends AppCompatActivity implements TranProtocalAnalysis.OnDeviceButtonPressedStateListener {
     private static final String TAG = "SppActivity";
 
 
     private Button btn_discovery;
     private Button btn_cancel;
     private Button btn_bonded;
+    private Button btn_audio;
+    private EditText edit;
 
     private ListView device_list;
     private DeviceAdapter mDeviceAdapter;
@@ -40,22 +46,27 @@ public class SppActivity extends AppCompatActivity {
     private SppBluetoothManager mSppManager;
     //    private static final UUID CONNECT_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
     private static final UUID CONNECT_UUID = UUID.fromString("00000000-0000-0000-0099-aabbccddeeff");
+    private static final byte[] UUID_AIROHA1520 = {0, 0, 0, 0, 0, 0, 0, 0, 0, -103, -86, -69, -52, -35, -18, -1};
 
     private static final int ENABLE_BLUETOOTH_REQUEST = 0x01;
+    private TranProtocalAnalysis mTranProtocalAnalysis;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spp);
         mSppManager = SppBluetoothManager.getInstance(this);
+        mTranProtocalAnalysis = TranProtocalAnalysis.getTranProtocalAnalysis(this);
+        mTranProtocalAnalysis.setOnDevicePressedStateListener(this);
 //        mSppManager.setConnectUUid(CONNECT_UUID);
         mSppManager.setBluetoothListener(new SppBluetoothManager.BluetoothListener() {
             @Override
             public void notifyChangeConnectstate(int mState) {
                 Log.e(TAG, "notigy change connect state : " + mState);
                 if (mState == SppBluetoothManager.STATE_CONNECTED) {
-                    Intent intent = new Intent(SppActivity.this, MessageActivity.class);
-                    startActivity(intent);
+//                    Intent intent = new Intent(SppActivity.this, MessageActivity.class);
+//                    startActivity(intent);
+                    Log.e(TAG, "spp aty connected ");
                 }
             }
 
@@ -105,7 +116,7 @@ public class SppActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         unregisterBluetoothReceiver();
-        mSppManager.stop();
+//        mSppManager.stop();
     }
 
     private void initView() {
@@ -113,7 +124,8 @@ public class SppActivity extends AppCompatActivity {
         btn_cancel = findViewById(R.id.cancel);
         device_list = findViewById(R.id.device_list);
         btn_bonded = findViewById(R.id.bonded);
-
+        btn_audio = findViewById(R.id.audio);
+        edit = findViewById(R.id.edit);
 
         mDeviceAdapter = new DeviceAdapter(this, mDevices);
         device_list.setAdapter(mDeviceAdapter);
@@ -128,6 +140,7 @@ public class SppActivity extends AppCompatActivity {
             startActivityForResult(intent, ENABLE_BLUETOOTH_REQUEST);
         }
 
+
         addListener();
     }
 
@@ -141,8 +154,19 @@ public class SppActivity extends AppCompatActivity {
 //                for (BluetoothDevice device : set) {
 //                    Log.e(TAG, "bond name : " + device.getName() + " \n bond address : " + device.getAddress());
 //                }
-                startActivity(new Intent(SppActivity.this, MessageActivity.class));
+//                startActivity(new Intent(SppActivity.this, MessageActivity.class));
+//                String ss = "{\"src\":\"zh-CN\",\"des\":\"en-US\",\"rec\":\"今天天气不错。\",\"tra\":\"Today's weather is fine.\"}";
+//                String ss = edit.getText().toString();
+//                mTranProtocalAnalysis.writeToDevice(ss);
+                mSppManager.getConnectBt();
 
+            }
+        });
+
+        btn_audio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SppActivity.this, HeadSetActivity.class));
             }
         });
 
@@ -152,7 +176,9 @@ public class SppActivity extends AppCompatActivity {
             public void onClick(View v) {
                 mDevices.clear();
                 mDeviceAdapter.notifyDataSetChanged();
-
+                Set<BluetoothDevice> mdevice = mSppManager.mBluetoothAdapter.getBondedDevices();
+                mDevices.addAll(mdevice);
+                mDeviceAdapter.notifyDataSetChanged();
 //                mSppManager.deviceEnableBluetoothDiscovery(0);
                 mSppManager.startDiscovery();
             }
@@ -161,7 +187,9 @@ public class SppActivity extends AppCompatActivity {
         btn_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mSppManager.stopDiscovery();
+//                mSppManager.stopDiscovery();
+                String ss = "{\"src\":\"zh-CN\",\"des\":\"en-US\",\"rec\":\"今\",\"tra\":\"Today's weather is fine.\"}";
+                mTranProtocalAnalysis.writeToDevice(ss);
             }
         });
 
@@ -173,7 +201,7 @@ public class SppActivity extends AppCompatActivity {
 //                if (mSppManager.createBond(currentDevice)) {
 //                    Log.e(TAG, "current device is bond");
 //                mSppManager.connect(currentDevice);
-
+                Log.e(TAG, "is main thread : " + (Looper.myLooper() == Looper.getMainLooper()));
 
 //
                 mSppManager.connect(currentDevice);
@@ -296,6 +324,32 @@ public class SppActivity extends AppCompatActivity {
 
     private void unregisterBluetoothReceiver() {
 //        unregisterReceiver(mReceiver);
+    }
+
+    @Override
+    public void onDevicePressedStateListener(int type) {
+        Log.e("device button : ", "" + type);
+    }
+
+    @Override
+    public void onDeviceReceiverTextMessageListener(final String msg) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+//                mConversationArrayAdapter.add("other : " + msg);
+
+            }
+        });
+    }
+
+    @Override
+    public void writeByteToOtherDeviceSuccess() {
+        Snackbar.make(btn_bonded, "发送成功", Snackbar.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void writeByteToOtherDeviceFailed() {
+        Snackbar.make(btn_bonded, "发送失败", Snackbar.LENGTH_SHORT).show();
     }
 
 

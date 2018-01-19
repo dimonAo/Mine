@@ -1,4 +1,4 @@
-package com.example.administrator.myapplication.headset;
+package com.example.administrator.myapplication.headset.newmanager;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -8,6 +8,8 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.util.Log;
+
+import com.example.administrator.myapplication.headset.AudioStateChange;
 
 import java.io.IOException;
 
@@ -31,8 +33,6 @@ public class AudioMediaPlayManager {
     private AudioMediaPlayManager(Context mContext) {
         this.mContext = mContext;
         mAudioManager = (AudioManager) mContext.getSystemService(Context.AUDIO_SERVICE);
-//        mMediaPlayer = new MediaPlayer();
-//        mMediaRecorder = new MediaRecorder();
     }
 
     public static AudioMediaPlayManager getAudioMediaPlayManager(Context mContext) {
@@ -46,14 +46,13 @@ public class AudioMediaPlayManager {
         return mInstance;
     }
 
-//    public void setFilePath(String mFilePath) {
-//        this.mFilePath = mFilePath;
-//    }
-
     public String getFilePath() {
         return mFilePath;
     }
 
+    /**
+     * 设置播放状态监听
+     */
     public void setAudioStateChange(AudioStateChange mAudioStateChange) {
         this.mAudioStateChange = mAudioStateChange;
     }
@@ -99,14 +98,14 @@ public class AudioMediaPlayManager {
         try {
             mMediaRecorder.prepare();//打开录音文件
         } catch (IOException e) {
-            Log.e(TAG, "prepare() failed");
+            e.printStackTrace();
         }
 
         if (!mAudioManager.isBluetoothScoAvailableOffCall()) {
             Log.e(TAG, "系统不支持蓝牙录音");
             return;
         }
-        mAudioManager.stopBluetoothSco();
+//        mAudioManager.stopBluetoothSco();
         //蓝牙录音的关键，启动SCO连接，耳机话筒才起作用
         mAudioManager.startBluetoothSco();
         //蓝牙SCO连接建立需要时间，连接建立后会发出ACTION_SCO_AUDIO_STATE_CHANGED消息，通过接收该消息而进入后续逻辑。
@@ -117,11 +116,10 @@ public class AudioMediaPlayManager {
                 int state = intent.getIntExtra(AudioManager.EXTRA_SCO_AUDIO_STATE, -1);
                 Log.e(TAG, "state : " + state);
                 if (AudioManager.SCO_AUDIO_STATE_CONNECTED == state) {
+                    Log.e(TAG,"sco audio state connected");
                     mAudioManager.setBluetoothScoOn(true);  //打开SCO
                     mMediaRecorder.start();//开始录音
-
                     mAudioStateChange.onStartRecoderUseBluetoothEar();
-
                     mContext.unregisterReceiver(this);//开始录音后就可以注销掉广播，下次录音再次注册
                 } else {//等待一秒后再尝试启动SCO
                     Log.e(TAG, "start sco fail");
@@ -130,7 +128,6 @@ public class AudioMediaPlayManager {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    mAudioManager.setBluetoothScoOn(true);
                     mAudioManager.startBluetoothSco();
 
                 }
@@ -146,6 +143,7 @@ public class AudioMediaPlayManager {
         mAudioStateChange.onStopRecoderUseBluetoothEar();
         releaseRecorder();
         if (mAudioManager.isBluetoothScoOn()) {
+            Log.e(TAG, "audio manager bluetooth sco on");
             mAudioManager.setBluetoothScoOn(false);
             mAudioManager.stopBluetoothSco();
         }
@@ -156,11 +154,10 @@ public class AudioMediaPlayManager {
             try {
                 mMediaRecorder.stop();
             } catch (IllegalStateException e) {
-                //e.printStackTrace();
                 mMediaRecorder = null;
                 mMediaRecorder = new MediaRecorder();
-//                mRecorder.stop();
             }
+            mMediaRecorder.reset();
             mMediaRecorder.release();
             mMediaRecorder = null;
         }
@@ -168,9 +165,10 @@ public class AudioMediaPlayManager {
 
     private void releaseMediaPlay() {
         if (mMediaPlayer != null) {
+            mMediaPlayer.reset();
             mMediaPlayer.release();
             mMediaPlayer = null;
-            mAudioManager.setStreamSolo(AudioManager.STREAM_MUSIC, false);
+//            mAudioManager.setStreamSolo(AudioManager.STREAM_MUSIC, false);
         }
     }
 
@@ -187,12 +185,9 @@ public class AudioMediaPlayManager {
         try {
 
             if (bluetoothEarCliented()) {
-                mAudioManager.setMode(AudioManager.MODE_NORMAL);
+                mAudioManager.setMode(AudioManager.MODE_IN_COMMUNICATION);
             }
-
-//            if (mAudioManager.isBluetoothA2dpOn())
-//                mAudioManager.setBluetoothA2dpOn(false); //如果A2DP没建立，则建立A2DP连接
-            mAudioManager.stopBluetoothSco();//如果SCO没有断开，由于SCO优先级高于A2DP，A2DP可能无声音
+            mAudioManager.stopBluetoothSco();
             mAudioManager.startBluetoothSco();
             try {
                 Thread.sleep(500);
@@ -200,23 +195,9 @@ public class AudioMediaPlayManager {
                 e.printStackTrace();
             }
             mAudioManager.setStreamSolo(AudioManager.STREAM_MUSIC, true);
-
-//            mAudioManager.setRouting(AudioManager.MODE_NORMAL, AudioManager.ROUTE_ALL, AudioManager.ROUTE_SPEAKER);
             mAudioManager.setSpeakerphoneOn(false);
             mAudioManager.setBluetoothScoOn(true);
 
-
-//            if (!mAudioManager.isBluetoothA2dpOn())
-//                mAudioManager.setBluetoothA2dpOn(true); //如果A2DP没建立，则建立A2DP连接
-//            mAudioManager.stopBluetoothSco();//如果SCO没有断开，由于SCO优先级高于A2DP，A2DP可能无声音
-//            try {
-//                Thread.sleep(500);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//            mAudioManager.setStreamSolo(AudioManager.STREAM_MUSIC, true);
-//            //让声音路由到蓝牙A2DP。此方法虽已弃用，但就它比较直接、好用。
-//            mAudioManager.setRouting(AudioManager.MODE_NORMAL, AudioManager.ROUTE_BLUETOOTH_A2DP, AudioManager.ROUTE_BLUETOOTH);
             mMediaPlayer.setDataSource(mFilePath);
 
             mMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
@@ -242,6 +223,7 @@ public class AudioMediaPlayManager {
             mMediaPlayer.start();
             mAudioStateChange.onStartPlayUseBluetoothEar();
         } catch (IOException e) {
+            e.printStackTrace();
             Log.e(TAG, "prepare() failed");
         }
     }
@@ -261,14 +243,10 @@ public class AudioMediaPlayManager {
      */
     public void startRecorderUsePhone(String mFilePath) {
         this.mFilePath = mFilePath;
-        //创建MediaRecorder对象
         mMediaRecorder = new MediaRecorder();
         try {
 
-            //配置mMediaRecorder相应参数
-            //从麦克风采集声音数据
             mMediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-            //设置保存文件格式为MP4
             mMediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
             //设置采样频率,44100是所有安卓设备都支持的频率,频率越高，音质越好，当然文件越大
             mMediaRecorder.setAudioSamplingRate(44100);
@@ -283,11 +261,8 @@ public class AudioMediaPlayManager {
             mMediaRecorder.start();
 
             mAudioStateChange.onStartRecoderUsePhone();
-            //记录开始录音时间
-//            startTime = System.currentTimeMillis();
         } catch (Exception e) {
             e.printStackTrace();
-//            recordFail();
         }
     }
 
@@ -311,32 +286,24 @@ public class AudioMediaPlayManager {
             if (bluetoothEarCliented()) {
                 mAudioManager.setMode(AudioManager.MODE_IN_COMMUNICATION);
             }
-
-
-//            if (mAudioManager.isBluetoothA2dpOn())
-//                mAudioManager.setBluetoothA2dpOn(false); //如果A2DP没建立，则建立A2DP连接
-            mAudioManager.stopBluetoothSco();//如果SCO没有断开，由于SCO优先级高于A2DP，A2DP可能无声音
+            mAudioManager.stopBluetoothSco();
             try {
                 Thread.sleep(500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             mAudioManager.setStreamSolo(AudioManager.STREAM_MUSIC, true);
-
-//            mAudioManager.setRouting(AudioManager.MODE_NORMAL, AudioManager.ROUTE_ALL, AudioManager.ROUTE_SPEAKER);
             mAudioManager.setBluetoothScoOn(false);
             mAudioManager.setSpeakerphoneOn(true);
 
             //设置播放音频数据文件
             mMediaPlayer.setDataSource(mFilePath);
 
-
             //设置播放监听事件
             mMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
                 public void onCompletion(MediaPlayer mediaPlayer) {
                     //播放完成
-//                    playEndOrFail(true);
                     releaseMediaPlay();
                     mAudioStateChange.onPlayCompletion();
                 }
@@ -345,27 +312,22 @@ public class AudioMediaPlayManager {
             mMediaPlayer.setOnErrorListener(new MediaPlayer.OnErrorListener() {
                 @Override
                 public boolean onError(MediaPlayer mediaPlayer, int i, int i1) {
-//                    playEndOrFail(false);
                     releaseMediaPlay();
                     mAudioStateChange.onPlayError();
 
                     return true;
                 }
             });
-            //播放器音量配置
-//            mMediaPlayer.setVolume(1, 1);
             //是否循环播放
             mMediaPlayer.setLooping(false);
-
             //准备及播放
             mMediaPlayer.prepare();
             mMediaPlayer.start();
 
             mAudioStateChange.onStartPlayUsePhone();
         } catch (IOException e) {
+            //播放失败
             e.printStackTrace();
-            //播放失败正理
-//            playEndOrFail(false);
         }
 
     }
