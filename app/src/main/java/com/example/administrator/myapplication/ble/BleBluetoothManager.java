@@ -7,9 +7,11 @@ import android.bluetooth.BluetoothGattCallback;
 import android.bluetooth.BluetoothGattCharacteristic;
 import android.bluetooth.BluetoothGattDescriptor;
 import android.bluetooth.BluetoothManager;
+import android.bluetooth.BluetoothProfile;
 import android.bluetooth.le.BluetoothLeScanner;
 import android.content.Context;
 import android.os.Handler;
+import android.util.Log;
 
 
 /**
@@ -17,14 +19,18 @@ import android.os.Handler;
  */
 
 public class BleBluetoothManager {
+    private static final String TAG = "BleBluetoothManager";
 
     private static BleBluetoothManager mInstance;
     private Context mContext;
 
     private BluetoothManager mBluetoothManager;
     private BluetoothAdapter mBluetoothAdapter;
+    private BluetoothGatt mBluetoothGatt;
     private Handler mHandler;
     private boolean mScanning;
+
+    private BleScanDeviceResult mBleScanDeviceResult;
 
     private BleBluetoothManager(Context mContext) {
         this.mContext = mContext;
@@ -52,7 +58,8 @@ public class BleBluetoothManager {
         return (mBluetoothAdapter != null && mBluetoothAdapter.isEnabled());
     }
 
-    public void startScan(boolean enable) {
+    public void startScan(boolean enable, BleScanDeviceResult mBleScanDeviceResult) {
+        this.mBleScanDeviceResult = mBleScanDeviceResult;
         if (enable) {
             mHandler.postDelayed(new Runnable() {
                 @Override
@@ -61,8 +68,8 @@ public class BleBluetoothManager {
                     mScanning = false;
                     mBluetoothAdapter.stopLeScan(mLeScanCallback);
                 }
-            }, 12000);
-            //开始扫描BLE 12秒后停止
+            }, 10000);
+            //开始扫描BLE 10秒后停止
             mScanning = true;
             mBluetoothAdapter.startLeScan(mLeScanCallback);
         } else {
@@ -75,6 +82,7 @@ public class BleBluetoothManager {
     public void stopScan() {
         if (mScanning) {
             mBluetoothAdapter.stopLeScan(mLeScanCallback);
+//            this.startScan(false);
         }
     }
 
@@ -83,17 +91,73 @@ public class BleBluetoothManager {
         @Override
         public void onLeScan(BluetoothDevice device, int rssi, byte[] scanRecord) {
             //处理扫描到的设备
-
-
-
+            Log.e(TAG, "address : " + device.getAddress() + " name : " + device.getName());
+            mBleScanDeviceResult.getScanBleDevice(device);
         }
     };
 
+
+    private String mBluetoothDeviceAddress;
+    private IBleConnectCallback mCallback;
+
+    public boolean connectBle(String address, IBleConnectCallback mCallback) {
+        this.mCallback = mCallback;
+        Log.e(TAG, "start connect : " + address);
+        if (mBluetoothAdapter == null || address == null) {
+            return false;
+        }
+
+        if (mBluetoothDeviceAddress != null && mBluetoothDeviceAddress.equals(address) && mBluetoothGatt != null) {
+            Log.e(TAG, "mBluetoothGatt connect : " + mBluetoothGatt.connect());
+            if (mBluetoothGatt.connect()) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        BluetoothDevice mDevice = mBluetoothAdapter.getRemoteDevice(address);
+        if (mDevice == null) {
+            return false;
+        }
+        Log.e(TAG, "");
+        mBluetoothGatt = mDevice.connectGatt(mContext, false, mBluetoothGattCallback);
+        mBluetoothDeviceAddress = address;
+
+        Log.e(TAG, "mBluetoothGatt : " + mBluetoothGatt);
+        return true;
+    }
+
+
+    /**
+     * BluetoothGatt实例化回调
+     */
     private BluetoothGattCallback mBluetoothGattCallback = new BluetoothGattCallback() {
 
         @Override
         public void onConnectionStateChange(BluetoothGatt gatt, int status, int newState) {
-            super.onConnectionStateChange(gatt, status, newState);
+            Log.e(TAG, "status : " + status + "---> newState : " + newState);
+            switch (newState) {
+                case BluetoothProfile.STATE_CONNECTING:
+                    mCallback.onStateChangeListener(BluetoothProfile.STATE_CONNECTING);
+                    break;
+
+
+                case BluetoothProfile.STATE_CONNECTED:
+                    mCallback.onStateChangeListener(BluetoothProfile.STATE_CONNECTED);
+                    mBluetoothGatt.discoverServices();
+
+                    break;
+
+                case BluetoothProfile.STATE_DISCONNECTING:
+                    mCallback.onStateChangeListener(BluetoothProfile.STATE_DISCONNECTING);
+                    break;
+
+                case BluetoothProfile.STATE_DISCONNECTED:
+                    mCallback.onStateChangeListener(BluetoothProfile.STATE_DISCONNECTED);
+                    break;
+            }
+
+
         }
 
         @Override
@@ -127,10 +191,6 @@ public class BleBluetoothManager {
         }
 
     };
-
-
-
-
 
 
 }

@@ -29,7 +29,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".spp.SppActivity">
+        <activity android:name=".ble.BleScanActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -43,7 +43,8 @@
         <activity android:name=".spp.MessageActivity" />
         <activity android:name=".headset.HeadSetActivity" />
         <activity android:name=".inputkeybroad.InputMethodActivity" />
-        <activity android:name=".ble.BleScanActivity" />
+        <activity android:name=".spp.SppActivity" />
+        <activity android:name=".ble.BleConnectActivity"></activity>
     </application>
 
 </manifest>
