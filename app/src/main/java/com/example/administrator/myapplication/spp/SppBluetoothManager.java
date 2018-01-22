@@ -32,8 +32,8 @@ import java.util.UUID;
 public class SppBluetoothManager {
 
     private static final String TAG = "SppBluetoothManager";
-    //    private static final UUID CONNECT_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
-    private static final UUID CONNECT_UUID = UUID.fromString("00000000-0000-0000-0099-aabbccddeeff");//00000000-0000-0000-0099-aabbccddeeff
+    private static final UUID CONNECT_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
+    //    private static final UUID CONNECT_UUID = UUID.fromString("00000000-0000-0000-0099-aabbccddeeff");//00000000-0000-0000-0099-aabbccddeeff
     private static final byte[] UUID_AIROHA1520 = {0, 0, 0, 0, 0, 0, 0, 0, 0, -103, -86, -69, -52, -35, -18, -1};
     private static SppBluetoothManager mInstance;
 
@@ -442,7 +442,8 @@ public class SppBluetoothManager {
         public AcceptThread() {
             BluetoothServerSocket tmp = null;
             mSocketType = "Secure";
-            UUID localUUID = getUuidFromByteArray(UUID_AIROHA1520);
+//            UUID localUUID = getUuidFromByteArray(UUID_AIROHA1520);
+            UUID localUUID = CONNECT_UUID;
             // Create a new listening server socket
             try {
 //                if (true) {
@@ -528,7 +529,8 @@ public class SppBluetoothManager {
             mmDevice = device;
             BluetoothSocket tmp = null;
             mSocketType = "Secure";
-            UUID localUUID = getUuidFromByteArray(UUID_AIROHA1520);
+//            UUID localUUID = getUuidFromByteArray(UUID_AIROHA1520);
+            UUID localUUID = CONNECT_UUID;
             // Get a BluetoothSocket for a connection with the
             // given BluetoothDevice
             try {
@@ -629,6 +631,10 @@ public class SppBluetoothManager {
                     // Read from the InputStream
                     bytes = mmInStream.read(buffer);
                     Log.e(TAG, "bytes : " + bytes);
+                    byte[] result =new byte[20];
+                    System.arraycopy(buffer,0,result,0,result.length);
+
+                    mMessageListener.readByteFromOtherDevice(result);
                     // Send the obtained bytes to the UI Activity
 //                    mHandler.obtainMessage(Constants.MESSAGE_READ, bytes, -1, buffer)
 //                            .sendToTarget();

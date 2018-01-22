@@ -127,20 +127,26 @@ public class TranProtocalAnalysis implements SppBluetoothManager.BluetoothReceiv
         int buttonPressDigit = cmd[digit];
 
         int packageNum = cmd[6];
+        Log.e(TAG, "cmd : " + Arrays.toString(cmd));
+        Log.e(TAG, "button digit : " + buttonDigit);
+        Log.e(TAG, "button press digit : " + buttonPressDigit);
+
+        buttonDigit = (buttonDigit & 0xFF);
 
         if (0x63 == checkDigit) {
             //按键指令
             Log.e(TAG, "checkDigit : " + checkDigit);
+
             if (buttonDigit == 0x84) {
                 //F2按键
                 if (pressed(buttonPressDigit)) {
                     //F2按下
-                    Log.e(TAG, "F2 p : " + checkDigit);
+                    Log.e(TAG, "F2 p : " + buttonPressDigit);
                     mHandler.removeMessages(BUTTON_F2_PRESSED);
                     mHandler.obtainMessage(BUTTON_F2_PRESSED).sendToTarget();
                 } else {
                     //F2松开
-                    Log.e(TAG, "F2 r : " + checkDigit);
+                    Log.e(TAG, "F2 r : " + buttonPressDigit);
                     mHandler.removeMessages(BUTTON_F2_RELEASED);
                     mHandler.obtainMessage(BUTTON_F2_RELEASED).sendToTarget();
                 }
@@ -149,13 +155,13 @@ public class TranProtocalAnalysis implements SppBluetoothManager.BluetoothReceiv
                 //F3按键
                 if (pressed(buttonPressDigit)) {
                     //F3按下
-                    Log.e(TAG, "F3 p : " + checkDigit);
+                    Log.e(TAG, "F3 p : " + buttonPressDigit);
                     mHandler.removeMessages(BUTTON_F3_PRESSED);
                     mHandler.obtainMessage(BUTTON_F3_PRESSED).sendToTarget();
 
                 } else {
                     //F3松开
-                    Log.e(TAG, "F3 r : " + checkDigit);
+                    Log.e(TAG, "F3 r : " + buttonPressDigit);
                     mHandler.removeMessages(BUTTON_F3_RELEASED);
                     mHandler.obtainMessage(BUTTON_F3_RELEASED).sendToTarget();
                 }

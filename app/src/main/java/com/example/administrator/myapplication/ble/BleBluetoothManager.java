@@ -6,6 +6,7 @@ import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothGattCallback;
 import android.bluetooth.BluetoothGattCharacteristic;
 import android.bluetooth.BluetoothGattDescriptor;
+import android.bluetooth.BluetoothGattService;
 import android.bluetooth.BluetoothManager;
 import android.bluetooth.BluetoothProfile;
 import android.bluetooth.le.BluetoothLeScanner;
@@ -150,7 +151,6 @@ public class BleBluetoothManager {
                     });
                     break;
 
-
                 case BluetoothProfile.STATE_CONNECTED:
                     mHandler.post(new Runnable() {
                         @Override
@@ -198,26 +198,42 @@ public class BleBluetoothManager {
         @Override
         public void onCharacteristicRead(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status) {
             Log.e(TAG, "characteristic read : " + Arrays.toString(characteristic.getValue()));
+            if (status == BluetoothGatt.GATT_SUCCESS) {
+
+
+            }
         }
 
         @Override
         public void onCharacteristicWrite(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status) {
-            super.onCharacteristicWrite(gatt, characteristic, status);
+            if (status == BluetoothGatt.GATT_SUCCESS) {
+
+
+            }
         }
 
         @Override
         public void onCharacteristicChanged(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic) {
             Log.e(TAG, "characteristic changed : " + Arrays.toString(characteristic.getValue()));
+
         }
 
         @Override
         public void onDescriptorRead(BluetoothGatt gatt, BluetoothGattDescriptor descriptor, int status) {
             Log.e(TAG, "descriptor read : " + Arrays.toString(descriptor.getValue()));
+            if (status == BluetoothGatt.GATT_SUCCESS) {
+
+
+            }
         }
 
         @Override
         public void onDescriptorWrite(BluetoothGatt gatt, BluetoothGattDescriptor descriptor, int status) {
             Log.e(TAG, "descriptor write : " + Arrays.toString(descriptor.getValue()));
+            if (status == BluetoothGatt.GATT_SUCCESS) {
+
+
+            }
         }
 
 
@@ -250,9 +266,28 @@ public class BleBluetoothManager {
             return;
         }
         mBluetoothGatt.readCharacteristic(characteristic);
-
-
     }
 
+    public void writeCharacteristic(String service_uuid, String characteristic_uuid, byte[] data) {
+        if (service_uuid != null && mBluetoothGatt != null) {
+
+            BluetoothGattService mService = mBluetoothGatt.getService(UUID.fromString(service_uuid));
+            if (mService != null && characteristic_uuid != null) {
+                BluetoothGattCharacteristic characteristic = mService.getCharacteristic(UUID.fromString(characteristic_uuid));
+                if (characteristic.setValue(data))
+                    if (mBluetoothGatt.writeCharacteristic(characteristic)) {
+                        Log.e(TAG, "write success ");
+                    }
+            }
+        }
+    }
+
+
+//    public void writeCharacteristic(BluetoothGattCharacteristic characteristic) {
+//        if (mBluetoothAdapter == null || mBluetoothGatt == null) {
+//            return;
+//        }
+//        mBluetoothGatt.writeCharacteristic(characteristic);
+//    }
 
 }
