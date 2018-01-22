@@ -13,6 +13,9 @@ import android.content.Context;
 import android.os.Handler;
 import android.util.Log;
 
+import java.util.Arrays;
+import java.util.UUID;
+
 
 /**
  * Created by Administrator on 2018/1/18 0018.
@@ -135,25 +138,48 @@ public class BleBluetoothManager {
 
         @Override
         public void onConnectionStateChange(BluetoothGatt gatt, int status, int newState) {
+            //状态回调是在子线程中，做UI操作需要转到主线程
             Log.e(TAG, "status : " + status + "---> newState : " + newState);
             switch (newState) {
                 case BluetoothProfile.STATE_CONNECTING:
-                    mCallback.onStateChangeListener(BluetoothProfile.STATE_CONNECTING);
+                    mHandler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            mCallback.onStateChangeListener(BluetoothProfile.STATE_CONNECTING);
+                        }
+                    });
                     break;
 
 
                 case BluetoothProfile.STATE_CONNECTED:
-                    mCallback.onStateChangeListener(BluetoothProfile.STATE_CONNECTED);
+                    mHandler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            mCallback.onStateChangeListener(BluetoothProfile.STATE_CONNECTED);
+
+                        }
+                    });
                     mBluetoothGatt.discoverServices();
 
                     break;
 
                 case BluetoothProfile.STATE_DISCONNECTING:
-                    mCallback.onStateChangeListener(BluetoothProfile.STATE_DISCONNECTING);
+                    mHandler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            mCallback.onStateChangeListener(BluetoothProfile.STATE_DISCONNECTING);
+                        }
+                    });
                     break;
 
                 case BluetoothProfile.STATE_DISCONNECTED:
-                    mCallback.onStateChangeListener(BluetoothProfile.STATE_DISCONNECTED);
+                    mHandler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            mCallback.onStateChangeListener(BluetoothProfile.STATE_DISCONNECTED);
+                        }
+                    });
+
                     break;
             }
 
@@ -162,12 +188,16 @@ public class BleBluetoothManager {
 
         @Override
         public void onServicesDiscovered(BluetoothGatt gatt, int status) {
-            super.onServicesDiscovered(gatt, status);
+            if (status == BluetoothGatt.GATT_SUCCESS) {
+                mCallback.onCharacteristicDiscovery(gatt);
+            } else {
+                Log.e(TAG, "onServices Discovered status : " + status);
+            }
         }
 
         @Override
         public void onCharacteristicRead(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status) {
-            super.onCharacteristicRead(gatt, characteristic, status);
+            Log.e(TAG, "characteristic read : " + Arrays.toString(characteristic.getValue()));
         }
 
         @Override
@@ -177,20 +207,52 @@ public class BleBluetoothManager {
 
         @Override
         public void onCharacteristicChanged(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic) {
-            super.onCharacteristicChanged(gatt, characteristic);
+            Log.e(TAG, "characteristic changed : " + Arrays.toString(characteristic.getValue()));
         }
 
         @Override
         public void onDescriptorRead(BluetoothGatt gatt, BluetoothGattDescriptor descriptor, int status) {
-            super.onDescriptorRead(gatt, descriptor, status);
+            Log.e(TAG, "descriptor read : " + Arrays.toString(descriptor.getValue()));
         }
 
         @Override
         public void onDescriptorWrite(BluetoothGatt gatt, BluetoothGattDescriptor descriptor, int status) {
-            super.onDescriptorWrite(gatt, descriptor, status);
+            Log.e(TAG, "descriptor write : " + Arrays.toString(descriptor.getValue()));
         }
 
+
     };
+
+    public static String HEART_RATE_MEASUREMENT = "00002a37-0000-1000-8000-00805f9b34fb";
+    public static String CLIENT_CHARACTERISTIC_CONFIG = "00002902-0000-1000-8000-00805f9b34fb";
+
+    public void setCharacteristicNotification(BluetoothGattCharacteristic characteristic, boolean enable) {
+        if (mBluetoothGatt == null || mBluetoothAdapter == null) {
+            return;
+        }
+        mBluetoothGatt.setCharacteristicNotification(characteristic, enable);
+
+        // TODO: 2018/1/22 0022 一些需要设备主动上报的UUID，需要设置descriptor可以进行Notification。例如:
+        /**将特定的UUID设置成Notification*/
+        if (enable) {
+            if (UUID.fromString(HEART_RATE_MEASUREMENT).equals(characteristic.getUuid())) {
+                BluetoothGattDescriptor descriptor = characteristic.getDescriptor(UUID.fromString(CLIENT_CHARACTERISTIC_CONFIG));
+                descriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
+                mBluetoothGatt.writeDescriptor(descriptor);
+            }
+        }
+
+    }
+
+    public void readCharacteristic(BluetoothGattCharacteristic characteristic) {
+        if (mBluetoothAdapter == null || mBluetoothGatt == null) {
+            Log.w(TAG, "BluetoothAdapter not initialized");
+            return;
+        }
+        mBluetoothGatt.readCharacteristic(characteristic);
+
+
+    }
 
 
 }

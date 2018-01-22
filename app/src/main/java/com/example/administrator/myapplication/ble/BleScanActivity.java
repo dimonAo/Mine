@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ExpandableListView;
 import android.widget.ListView;
 
 import com.example.administrator.myapplication.R;
@@ -22,6 +23,7 @@ public class BleScanActivity extends AppCompatActivity {
     private ListView device_list;
     private DeviceAdapter mDeviceAdapter;
     private BleBluetoothManager mBleBluetoothManager;
+
     List<BluetoothDevice> mDevices = new ArrayList<>();
 
     @Override
