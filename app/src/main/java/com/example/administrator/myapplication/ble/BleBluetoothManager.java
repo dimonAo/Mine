@@ -28,7 +28,6 @@ public class BleBluetoothManager {
     private static BleBluetoothManager mInstance;
     private Context mContext;
 
-    private BluetoothManager mBluetoothManager;
     private BluetoothAdapter mBluetoothAdapter;
     private BluetoothGatt mBluetoothGatt;
     private Handler mHandler;
@@ -38,7 +37,7 @@ public class BleBluetoothManager {
 
     private BleBluetoothManager(Context mContext) {
         this.mContext = mContext;
-        mBluetoothManager = (BluetoothManager) mContext.getSystemService(Context.BLUETOOTH_SERVICE);
+        BluetoothManager mBluetoothManager = (BluetoothManager) mContext.getSystemService(Context.BLUETOOTH_SERVICE);
         mBluetoothAdapter = mBluetoothManager.getAdapter();
         mHandler = new Handler();
     }
@@ -114,8 +113,10 @@ public class BleBluetoothManager {
         if (mBluetoothDeviceAddress != null && mBluetoothDeviceAddress.equals(address) && mBluetoothGatt != null) {
             Log.e(TAG, "mBluetoothGatt connect : " + mBluetoothGatt.connect());
             if (mBluetoothGatt.connect()) {
+                Log.e(TAG, "connected");
                 return true;
             } else {
+                Log.e(TAG, "disconnected");
                 return false;
             }
         }
@@ -173,6 +174,11 @@ public class BleBluetoothManager {
                     break;
 
                 case BluetoothProfile.STATE_DISCONNECTED:
+                    if (mBluetoothGatt != null) {
+                        mBluetoothGatt.close();
+                        mBluetoothGatt = null;
+                    }
+
                     mHandler.post(new Runnable() {
                         @Override
                         public void run() {
@@ -197,17 +203,21 @@ public class BleBluetoothManager {
 
         @Override
         public void onCharacteristicRead(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status) {
-            Log.e(TAG, "characteristic read : " + Arrays.toString(characteristic.getValue()));
+            Log.e(TAG, "characteristic read status : " + status);
             if (status == BluetoothGatt.GATT_SUCCESS) {
+                //读取数据成功
+                Log.e(TAG, "read success ");
+                Log.e(TAG, "characteristic read : " + Arrays.toString(characteristic.getValue()));
 
-
+            } else {
+                Log.e(TAG, "read fail ");
             }
         }
 
         @Override
         public void onCharacteristicWrite(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status) {
             if (status == BluetoothGatt.GATT_SUCCESS) {
-
+                //写数据成功
 
             }
         }
@@ -281,13 +291,5 @@ public class BleBluetoothManager {
             }
         }
     }
-
-
-//    public void writeCharacteristic(BluetoothGattCharacteristic characteristic) {
-//        if (mBluetoothAdapter == null || mBluetoothGatt == null) {
-//            return;
-//        }
-//        mBluetoothGatt.writeCharacteristic(characteristic);
-//    }
 
 }

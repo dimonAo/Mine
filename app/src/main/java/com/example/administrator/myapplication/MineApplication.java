@@ -17,9 +17,9 @@ public SppBluetoothManager mManager;
     @Override
     public void onCreate() {
         super.onCreate();
-        mManager = SppBluetoothManager.getInstance(getApplicationContext());
-
-       mManager.bluetoothRegisterReceiver();
+//        mManager = SppBluetoothManager.getInstance(getApplicationContext());
+//
+//       mManager.bluetoothRegisterReceiver();
     }
 
 
