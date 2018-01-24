@@ -2,6 +2,7 @@ package com.example.administrator.myapplication.blet;
 
 import android.app.Activity;
 import android.bluetooth.BluetoothDevice;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -40,7 +41,7 @@ public class BleScantActivity extends AppCompatActivity {
         setContentView(R.layout.activity_ble_scan);
         mBluzScanHelper = BluzScanHelper.getInstance(this);
         mBluzScanHelper.addOnDiscoveryListener(mOndiscoveryListener);
-        mBluzScanHelper.addOnConnectionListener(mOnConnectionListener);
+//        mBluzScanHelper.addOnConnectionListener(mOnConnectionListener);
         start_scan = findViewById(R.id.start_scan);
         stop_scan = findViewById(R.id.stop_scan);
         device_list = findViewById(R.id.device_list);
@@ -63,7 +64,11 @@ public class BleScantActivity extends AppCompatActivity {
         device_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                mBluzScanHelper.connect(mDevices.get(position));
+//                mBluzScanHelper.connect(mDevices.get(position));
+
+                Intent intent = new Intent(BleScantActivity.this, BletConnectActivity.class);
+                intent.putExtra("device_address", mDevices.get(position).getAddress());
+                startActivity(intent);
             }
         });
 
@@ -88,24 +93,26 @@ public class BleScantActivity extends AppCompatActivity {
 
         @Override
         public void onDiscoveryFinished() {
-
+            Log.e(TAG, "discovery finished");
         }
     };
 
-    /**
-     * 连接设备回调
-     */
-    private IBluzScanHelper.OnConnectionListener mOnConnectionListener = new IBluzScanHelper.OnConnectionListener() {
-        @Override
-        public void onConnected(BluetoothDevice device) {
-            Log.e(TAG, "connected");
-        }
-
-        @Override
-        public void onDisconnected(BluetoothDevice device) {
-            Log.e(TAG, "disconnected");
-        }
-    };
+//    /**
+//     * 连接设备回调
+//     */
+//    private IBluzScanHelper.OnConnectionListener mOnConnectionListener = new IBluzScanHelper.OnConnectionListener() {
+//        @Override
+//        public void onConnected(BluetoothDevice device) {
+//            Log.e(TAG, "connected");
+//
+//
+//        }
+//
+//        @Override
+//        public void onDisconnected(BluetoothDevice device) {
+//            Log.e(TAG, "disconnected");
+//        }
+//    };
 
     @Override
     protected void onStart() {
@@ -114,8 +121,13 @@ public class BleScantActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+        mBluzScanHelper.unregistBroadcast(this);
+    }
+
+    @Override
     protected void onDestroy() {
         super.onDestroy();
-        mBluzScanHelper.unregistBroadcast(this);
     }
 }

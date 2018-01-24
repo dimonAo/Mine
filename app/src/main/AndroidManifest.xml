@@ -29,7 +29,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".blet.BleScantActivity">
+        <activity android:name=".headset.HeadSetActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,11 +41,12 @@
         <activity android:name=".camera.DealPictureActivity" />
         <activity android:name=".camera.CameraActivity" />
         <activity android:name=".spp.MessageActivity" />
-        <activity android:name=".headset.HeadSetActivity" />
+        <activity android:name=".blet.BleScantActivity" />
         <activity android:name=".inputkeybroad.InputMethodActivity" />
         <activity android:name=".spp.SppActivity" />
         <activity android:name=".ble.BleConnectActivity" />
         <activity android:name=".ble.BleScanActivity" />
+        <activity android:name=".blet.BletConnectActivity" />
     </application>
 
 </manifest>

@@ -1,12 +1,11 @@
-package com.example.administrator.myapplication.ble;
+package com.example.administrator.myapplication.blet;
 
-import android.bluetooth.BluetoothGatt;
+import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGattCharacteristic;
 import android.bluetooth.BluetoothGattService;
-import android.bluetooth.BluetoothProfile;
-import android.os.Looper;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -19,23 +18,32 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class BleConnectActivity extends AppCompatActivity {
-    private static final String TAG = "BleConnectActivity";
+/**
+ * Created by Administrator on 2018/1/24 0024.
+ */
+
+public class BletConnectActivity extends AppCompatActivity {
+    private static final String TAG = "BletConnectActivity";
     private String connectAddress;
     private Button connect;
+    private IBluzScanHelper mBluzScanHelper;
+    private BluzManager mBluzManager;
     private ExpandableListView gatt_services_list;
     private BluetoothGattCharacteristic mNotifyCharacteristic;
     private ArrayList<ArrayList<BluetoothGattCharacteristic>> mGattCharacteristics =
             new ArrayList<ArrayList<BluetoothGattCharacteristic>>();
     private final String LIST_NAME = "NAME";
     private final String LIST_UUID = "UUID";
-    private BleBluetoothManager mBleBluetoothManager;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ble_connect);
-        mBleBluetoothManager = BleBluetoothManager.getInstance(this);
+
+        mBluzManager = BluzManager.getInstance(this);
+        mBluzScanHelper = BluzScanHelper.getInstance(this);
+
+        mBluzScanHelper.addOnConnectionListener(mOnConnectionListener);
 
         connectAddress = getIntent().getStringExtra("device_address");
         Log.e(TAG, "connect address : " + connectAddress);
@@ -46,10 +54,9 @@ public class BleConnectActivity extends AppCompatActivity {
         connect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mBleBluetoothManager.connectBle(connectAddress, mCallback);
+                mBluzScanHelper.connect(connectAddress);
             }
         });
-
 
     }
 
@@ -66,16 +73,17 @@ public class BleConnectActivity extends AppCompatActivity {
                             // If there is an active notification on a characteristic, clear
                             // it first so it doesn't update the data field on the user interface.
                             if (mNotifyCharacteristic != null) {
-                                mBleBluetoothManager.setCharacteristicNotification(
-                                        mNotifyCharacteristic, false);
+//                                mBluzManager.setCharacteristicNotification(
+//                                        mNotifyCharacteristic, false);
                                 mNotifyCharacteristic = null;
                             }
-                            mBleBluetoothManager.readCharacteristic(characteristic);
+//                            mBleBluetoothManager.readCharacteristic(characteristic);
+                            mBluzManager.readCharacteristic(characteristic);
                         }
                         if ((charaProp | BluetoothGattCharacteristic.PROPERTY_NOTIFY) > 0) {
                             mNotifyCharacteristic = characteristic;
-                            mBleBluetoothManager.setCharacteristicNotification(
-                                    characteristic, true);
+//                            mBleBluetoothManager.setCharacteristicNotification(
+//                                    characteristic, true);
                         }
                         return true;
                     }
@@ -83,8 +91,15 @@ public class BleConnectActivity extends AppCompatActivity {
                 }
             };
 
+
+    private void getData() {
+        Log.e(TAG,"get data ");
+        displayGattServices(mBluzManager.getBluetoothGattService());
+    }
+
     private void displayGattServices(List<BluetoothGattService> gattServices) {
         if (gattServices == null) return;
+        Log.e(TAG, "displayGattServices size : " + gattServices.size());
         String uuid;
         String unknownServiceString = getResources().getString(R.string.unknown_service);
         String unknownCharaString = getResources().getString(R.string.unknown_characteristic);
@@ -108,7 +123,7 @@ public class BleConnectActivity extends AppCompatActivity {
                     gattService.getCharacteristics();
             ArrayList<BluetoothGattCharacteristic> charas =
                     new ArrayList<BluetoothGattCharacteristic>();
-//            Log.e(TAG, "service uuid : " + uuid);
+            Log.e(TAG, "service uuid : " + uuid);
             // Loops through available Characteristics.
             for (BluetoothGattCharacteristic gattCharacteristic : gattCharacteristics) {
                 charas.add(gattCharacteristic);
@@ -118,7 +133,7 @@ public class BleConnectActivity extends AppCompatActivity {
                         LIST_NAME, lookup(uuid, unknownCharaString));
                 currentCharaData.put(LIST_UUID, uuid);
                 gattCharacteristicGroupData.add(currentCharaData);
-//                Log.e(TAG, "characteristic uuid : " + uuid);
+                Log.e(TAG, "characteristic uuid : " + uuid);
             }
             mGattCharacteristics.add(charas);
             gattCharacteristicData.add(gattCharacteristicGroupData);
@@ -150,35 +165,30 @@ public class BleConnectActivity extends AppCompatActivity {
         return name == null ? defaultName : name;
     }
 
-
-    private IBleConnectCallback mCallback = new IBleConnectCallback() {
+    /**
+     * 连接设备回调
+     */
+    private IBluzScanHelper.OnConnectionListener mOnConnectionListener = new IBluzScanHelper.OnConnectionListener() {
         @Override
-        public void onStateChangeListener(int state) {
+        public void onConnected(BluetoothDevice device) {
+            Log.e(TAG, "blet connect activity connected");
 
-            Log.e(TAG, "main thread : " + (Looper.getMainLooper() == Looper.myLooper()));
-            switch (state) {
-                case BluetoothProfile.STATE_CONNECTING:
-                    connect.setText("connecting");
-
-                    break;
-                case BluetoothProfile.STATE_CONNECTED:
-                    connect.setText("connected");
-                    break;
-
-                case BluetoothProfile.STATE_DISCONNECTING:
-
-                    connect.setText("disconnecting");
-                    break;
-
-                case BluetoothProfile.STATE_DISCONNECTED:
-                    connect.setText("disconnected");
-                    break;
-            }
         }
 
         @Override
-        public void onCharacteristicDiscovery(BluetoothGatt mGatt) {
-            displayGattServices(mGatt.getServices());
+        public void onDisconnected(BluetoothDevice device) {
+            Log.e(TAG, "disconnected");
+        }
+
+        @Override
+        public void onServiceDiscovery() {
+            getData();
         }
     };
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
 }

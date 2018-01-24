@@ -16,6 +16,7 @@ import android.bluetooth.BluetoothProfile;
 import android.content.Context;
 import android.util.Log;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -185,7 +186,7 @@ public class BluetoothLeService {
             Log.e(TAG, "蓝牙设备没有发现，无法连接。");
             return false;
         }
-        close();//每次连接之前先释放掉原来的资源
+//        close();//每次连接之前先释放掉原来的资源
         mBluetoothGatt = device.connectGatt(getContext(), false, mGattCallback);//创建新的连接
         return true;
     }
@@ -250,6 +251,7 @@ public class BluetoothLeService {
         @Override
         public void onCharacteristicRead(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status) {
             if (mCharacteristicListener != null) {
+                Log.e(TAG,"read : "+ Arrays.toString(characteristic.getValue()));
                 mCharacteristicListener.onCharacteristicRead(gatt, characteristic, status);
             }
         }

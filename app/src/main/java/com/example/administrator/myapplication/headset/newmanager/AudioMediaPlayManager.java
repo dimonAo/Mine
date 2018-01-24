@@ -105,7 +105,9 @@ public class AudioMediaPlayManager {
             Log.e(TAG, "系统不支持蓝牙录音");
             return;
         }
-//        mAudioManager.stopBluetoothSco();
+        if (mAudioManager.isBluetoothScoOn()) {
+            mAudioManager.stopBluetoothSco();
+        }
         //蓝牙录音的关键，启动SCO连接，耳机话筒才起作用
         mAudioManager.startBluetoothSco();
         //蓝牙SCO连接建立需要时间，连接建立后会发出ACTION_SCO_AUDIO_STATE_CHANGED消息，通过接收该消息而进入后续逻辑。
@@ -115,21 +117,23 @@ public class AudioMediaPlayManager {
             public void onReceive(Context context, Intent intent) {
                 int state = intent.getIntExtra(AudioManager.EXTRA_SCO_AUDIO_STATE, -1);
                 Log.e(TAG, "state : " + state);
-                if (AudioManager.SCO_AUDIO_STATE_CONNECTED == state) {
-                    Log.e(TAG,"sco audio state connected");
-                    mAudioManager.setBluetoothScoOn(true);  //打开SCO
-                    mMediaRecorder.start();//开始录音
-                    mAudioStateChange.onStartRecoderUseBluetoothEar();
-                    mContext.unregisterReceiver(this);//开始录音后就可以注销掉广播，下次录音再次注册
-                } else {//等待一秒后再尝试启动SCO
-                    Log.e(TAG, "start sco fail");
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    mAudioManager.startBluetoothSco();
+                if (AudioManager.ACTION_SCO_AUDIO_STATE_UPDATED.equals(intent.getAction())) {
+                    if (AudioManager.SCO_AUDIO_STATE_CONNECTED == state) {
+                        Log.e(TAG, "sco audio state connected");
+                        mAudioManager.setBluetoothScoOn(true);  //打开SCO
+                        mMediaRecorder.start();//开始录音
+                        mAudioStateChange.onStartRecoderUseBluetoothEar();
+                        mContext.unregisterReceiver(this);//开始录音后就可以注销掉广播，下次录音再次注册
+                    } else {//等待一秒后再尝试启动SCO
+                        Log.e(TAG, "start sco fail");
+                        try {
+                            Thread.sleep(1000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        mAudioManager.startBluetoothSco();
 
+                    }
                 }
             }
         }, new IntentFilter(AudioManager.ACTION_SCO_AUDIO_STATE_UPDATED));

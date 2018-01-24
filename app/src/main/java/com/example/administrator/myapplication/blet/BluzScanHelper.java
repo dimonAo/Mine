@@ -18,6 +18,7 @@ import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.RequiresApi;
+import android.text.TextUtils;
 import android.util.Log;
 
 import java.util.ArrayList;
@@ -244,6 +245,15 @@ public class BluzScanHelper implements IBluzScanHelper, BluetoothLeService.OnCon
     }
 
     @Override
+    public boolean connect(String address) {
+        if (TextUtils.isEmpty(address) || mBluetoothLeService == null) {
+            return false;
+        }
+        cancelDiscovery();
+        return mBluetoothLeService.connect(address);
+    }
+
+    @Override
     public void disconnect() {
         if (mBluetoothLeService != null) {
             mBluetoothLeService.disconnect();
@@ -321,15 +331,19 @@ public class BluzScanHelper implements IBluzScanHelper, BluetoothLeService.OnCon
 
     @Override
     public void onServicesDiscovered() {
-        List<BluetoothGattService> list = mBluetoothLeService.getSupportedGattServices();
-        Log.e(TAG, "service size : " + list.size());
-        for (BluetoothGattService bluetoothGattService : list) {
-            Log.e(TAG, "service uuid : " + bluetoothGattService.getUuid());
-            List<BluetoothGattCharacteristic> cList = bluetoothGattService.getCharacteristics();
-            for (int i = 0; i < cList.size(); i++) {
-                Log.e(TAG, "characteristic uuid : " + cList.get(i).getUuid());
-            }
+        Log.e(TAG, "bluz scan helper onservice discovered");
+        for (int i = 0; i < connectionListenerList.size(); i++) {
+            connectionListenerList.get(i).onServiceDiscovery();
         }
+//        List<BluetoothGattService> list = mBluetoothLeService.getSupportedGattServices();
+//        Log.e(TAG, "service size : " + list.size());
+//        for (BluetoothGattService bluetoothGattService : list) {
+//            Log.e(TAG, "service uuid : " + bluetoothGattService.getUuid());
+//            List<BluetoothGattCharacteristic> cList = bluetoothGattService.getCharacteristics();
+//            for (int i = 0; i < cList.size(); i++) {
+//                Log.e(TAG, "characteristic uuid : " + cList.get(i).getUuid());
+//            }
+//        }
     }
 
     @Override

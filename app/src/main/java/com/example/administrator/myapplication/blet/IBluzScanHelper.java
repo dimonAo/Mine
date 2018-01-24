@@ -59,6 +59,12 @@ public interface IBluzScanHelper {
     boolean connect(BluetoothDevice device);
 
     /**
+     * 通过地址连接蓝牙设备
+     */
+    boolean connect(String address);
+
+
+    /**
      * 断开全部连接
      */
     void disconnect();
@@ -115,6 +121,9 @@ public interface IBluzScanHelper {
          * 已断开连接
          */
         void onDisconnected(BluetoothDevice device);
+
+
+        void onServiceDiscovery();
     }
 
 }
