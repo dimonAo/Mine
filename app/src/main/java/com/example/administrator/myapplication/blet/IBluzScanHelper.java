@@ -122,7 +122,9 @@ public interface IBluzScanHelper {
          */
         void onDisconnected(BluetoothDevice device);
 
-
+        /***
+         * 发现所有service和characteristic UUID
+         */
         void onServiceDiscovery();
     }
 
