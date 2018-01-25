@@ -6,7 +6,6 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothGattCharacteristic;
-import android.bluetooth.BluetoothGattService;
 import android.bluetooth.le.BluetoothLeScanner;
 import android.bluetooth.le.ScanCallback;
 import android.bluetooth.le.ScanResult;
@@ -175,6 +174,12 @@ public class BluzScanHelper implements IBluzScanHelper, BluetoothLeService.OnCon
         } else {
             if (!bluetoothAdapter.isEnabled()) return;
             mLeScanner = bluetoothAdapter.getBluetoothLeScanner();
+            mHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    stopLeScan();
+                }
+            }, SCAN_PERIOD);
             mLeScanner.startScan(mBleScanCallback);
         }
     }
@@ -214,6 +219,7 @@ public class BluzScanHelper implements IBluzScanHelper, BluetoothLeService.OnCon
             bluetoothAdapter.startLeScan(mLeScanCallback);
         } else {
             stopLeDevice();
+
         }
     }
 
@@ -221,6 +227,7 @@ public class BluzScanHelper implements IBluzScanHelper, BluetoothLeService.OnCon
      * 低功耗蓝牙停止查找
      */
     private void stopLeDevice() {
+        setDiscovery(false);
         bluetoothAdapter.stopLeScan(mLeScanCallback);
         for (int i = 0; i < discoveryListenerList.size(); i++) {
             discoveryListenerList.get(i).onDiscoveryFinished();
@@ -229,6 +236,7 @@ public class BluzScanHelper implements IBluzScanHelper, BluetoothLeService.OnCon
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void stopLeScan() {
+        setDiscovery(false);
         if (!bluetoothAdapter.isEnabled()) return;
         mLeScanner = bluetoothAdapter.getBluetoothLeScanner();
         mLeScanner.stopScan(mBleScanCallback);

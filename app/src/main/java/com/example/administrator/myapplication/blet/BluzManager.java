@@ -3,6 +3,7 @@ package com.example.administrator.myapplication.blet;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothGattCharacteristic;
+import android.bluetooth.BluetoothGattDescriptor;
 import android.bluetooth.BluetoothGattService;
 import android.content.Context;
 import android.util.Log;
@@ -173,6 +174,14 @@ public class BluzManager implements BluetoothLeService.OnCharacteristicListener 
     public List<BluetoothGattService> getBluetoothGattService() {
         Log.e(TAG, "get bluetooth gatt service");
         return mBluetoothLeService.getSupportedGattServices();
+    }
+
+    public void setCharacteristicNotification(BluetoothGattCharacteristic characteristic, boolean enable) {
+        mBluetoothLeService.setCharacteristicNotification(characteristic, enable);
+    }
+
+    public void writeDescriptor(BluetoothGattDescriptor descriptor){
+        mBluetoothLeService.writeDescriptor(descriptor);
     }
 
     /**

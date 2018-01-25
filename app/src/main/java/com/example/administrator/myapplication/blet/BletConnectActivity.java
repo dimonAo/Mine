@@ -2,6 +2,7 @@ package com.example.administrator.myapplication.blet;
 
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGattCharacteristic;
+import android.bluetooth.BluetoothGattDescriptor;
 import android.bluetooth.BluetoothGattService;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -68,13 +69,22 @@ public class BletConnectActivity extends AppCompatActivity {
                     if (mGattCharacteristics != null) {
                         final BluetoothGattCharacteristic characteristic =
                                 mGattCharacteristics.get(groupPosition).get(childPosition);
+
+
+//                        List<BluetoothGattDescriptor> descriptors = characteristic.getDescriptors();
+//                        for (BluetoothGattDescriptor descriptor : descriptors) {
+//                            Log.e(TAG,"Descriptor UUID : "+descriptor.getUuid());
+//                            Log.e(TAG,"Descriptor getValue : "+ Arrays.toString(descriptor.getValue()));
+//                        }
+
+
                         final int charaProp = characteristic.getProperties();
                         if ((charaProp | BluetoothGattCharacteristic.PROPERTY_READ) > 0) {
                             // If there is an active notification on a characteristic, clear
                             // it first so it doesn't update the data field on the user interface.
                             if (mNotifyCharacteristic != null) {
-//                                mBluzManager.setCharacteristicNotification(
-//                                        mNotifyCharacteristic, false);
+                                mBluzManager.setCharacteristicNotification(
+                                        mNotifyCharacteristic, false);
                                 mNotifyCharacteristic = null;
                             }
 //                            mBleBluetoothManager.readCharacteristic(characteristic);
@@ -82,8 +92,15 @@ public class BletConnectActivity extends AppCompatActivity {
                         }
                         if ((charaProp | BluetoothGattCharacteristic.PROPERTY_NOTIFY) > 0) {
                             mNotifyCharacteristic = characteristic;
-//                            mBleBluetoothManager.setCharacteristicNotification(
-//                                    characteristic, true);
+                            mBluzManager.setCharacteristicNotification(
+                                    characteristic, true);
+                            List<BluetoothGattDescriptor> descriptors = characteristic.getDescriptors();
+                            for (int i = 0; i < descriptors.size(); i++) {
+                                if ("00002902-0000-1000-8000-00805f9b34fb".equals(descriptors.get(i).getUuid().toString())) {
+                                    mBluzManager.writeDescriptor(descriptors.get(i));
+                                }
+                            }
+
                         }
                         return true;
                     }
@@ -93,7 +110,7 @@ public class BletConnectActivity extends AppCompatActivity {
 
 
     private void getData() {
-        Log.e(TAG,"get data ");
+        Log.e(TAG, "get data ");
         displayGattServices(mBluzManager.getBluetoothGattService());
     }
 

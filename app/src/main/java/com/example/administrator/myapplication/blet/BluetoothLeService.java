@@ -114,9 +114,18 @@ public class BluetoothLeService {
      *
      * @return true or false
      */
-    public boolean discoverServices() {
-        return !(!isConnected() || mBluetoothGatt == null)
-                && mBluetoothGatt.discoverServices();
+//    public boolean discoverServices() {
+//        return !(!isConnected() || mBluetoothGatt == null)
+//                && mBluetoothGatt.discoverServices();
+//    }
+
+    public void discoverServices() {
+        if(!isConnected() || mBluetoothGatt == null){
+            return;
+        }
+        mBluetoothGatt.discoverServices();
+//        return !(!isConnected() || mBluetoothGatt == null)
+//                && mBluetoothGatt.discoverServices();
     }
 
     /**

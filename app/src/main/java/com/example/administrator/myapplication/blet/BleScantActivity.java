@@ -1,6 +1,5 @@
 package com.example.administrator.myapplication.blet;
 
-import android.app.Activity;
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +15,7 @@ import com.example.administrator.myapplication.R;
 import com.example.administrator.myapplication.spp.DeviceAdapter;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -87,6 +87,7 @@ public class BleScantActivity extends AppCompatActivity {
                     return;
                 }
             }
+            Log.e(TAG, "device uuids : " + Arrays.toString(device.getUuids()));
             mDevices.add(device);
             mDeviceAdapter.notifyDataSetChanged();
         }

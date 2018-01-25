@@ -29,9 +29,34 @@ public class myClass {
 //        System.out.println(byteToBit((byte) 900));
 //        System.out.println(byteToBit((byte) 388));
 //        System.out.println((byte) 388);
-        System.out.println(bytes2Int(new byte[]{12, 14, 15}));
+//        System.out.println(1 << 3);
+//        System.out.println(2 << 3);
+//
+//
+//        System.out.println(bytes2Int(new byte[]{12, 14, 15}));
 
+        byte[] toByte = new byte[]{67, 56, 48, 95, 86, 49, 46, 48};
+//        byte[] toByte = new byte[]{-113, 31, 117, 0, 0, 120, -38, -25};
+//        byte[] toByte = new byte[]{48, 55};
+        System.out.println(new String(toByte));
 
+//        System.out.println(bytesToHexString(toByte));
+    }
+
+    public static String bytesToHexString(byte[] src) {
+        StringBuilder stringBuilder = new StringBuilder("");
+        if (src == null || src.length <= 0) {
+            return null;
+        }
+        for (int i = 0; i < src.length; i++) {
+            int v = src[i] & 0xFF;
+            String hv = Integer.toHexString(v);
+            if (hv.length() < 2) {
+                stringBuilder.append(0);
+            }
+            stringBuilder.append(hv);
+        }
+        return stringBuilder.toString().toUpperCase();
     }
 
     public static String byteToBit(byte b) {
