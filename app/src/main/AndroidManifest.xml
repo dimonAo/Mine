@@ -29,7 +29,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".blet.BleScantActivity">
+        <activity android:name=".charts.HelloChartsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -47,6 +47,7 @@
         <activity android:name=".ble.BleConnectActivity" />
         <activity android:name=".ble.BleScanActivity" />
         <activity android:name=".blet.BletConnectActivity" />
+        <activity android:name=".blet.BleScantActivity"></activity>
     </application>
 
 </manifest>

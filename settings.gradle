@@ -1,1 +1,1 @@
-include ':app', ':test_lib'
+include ':app', ':test_lib',':hellocharts-library'
