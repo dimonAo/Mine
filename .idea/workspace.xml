@@ -6,131 +6,185 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="info" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c26834ca-87c6-40ed-9dcc-3e772bc49a9a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/libs/android-support-v4.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_annotations_23_4_0_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_v4_23_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/charts/HelloChartsActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_hello_charts.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values-sw240dp/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values-sw300dp/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values-sw360dp/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values-sw480dp/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values-sw600dp/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values-sw720dp/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values-sw800dp/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/.classpath" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/.project" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/gradle.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/hellocharts-library.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/proguard-project.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/project.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/res/values-v11/styles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/res/values-v14/styles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/res/values/strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/res/values/styles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/animation/ChartAnimationListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/animation/ChartDataAnimator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/animation/ChartDataAnimatorV14.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/animation/ChartDataAnimatorV8.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/animation/ChartViewportAnimator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/animation/ChartViewportAnimatorV14.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/animation/ChartViewportAnimatorV8.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/animation/DummyChartAnimationListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/animation/PieChartRotationAnimator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/animation/PieChartRotationAnimatorV14.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/animation/PieChartRotationAnimatorV8.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/computator/ChartComputator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/computator/PreviewChartComputator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/formatter/AxisValueFormatter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/formatter/BubbleChartValueFormatter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/formatter/ColumnChartValueFormatter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/formatter/LineChartValueFormatter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/formatter/PieChartValueFormatter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/formatter/SimpleAxisValueFormatter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/formatter/SimpleBubbleChartValueFormatter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/formatter/SimpleColumnChartValueFormatter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/formatter/SimpleLineChartValueFormatter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/formatter/SimplePieChartValueFormatter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/formatter/ValueFormatterHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/gesture/ChartScroller.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/gesture/ChartTouchHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/gesture/ChartZoomer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/gesture/ContainerScrollType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/gesture/PieChartTouchHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/gesture/PreviewChartTouchHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/gesture/ZoomType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/gesture/ZoomerCompat.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/listener/BubbleChartOnValueSelectListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/listener/ColumnChartOnValueSelectListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/listener/ComboLineColumnChartOnValueSelectListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/listener/DummyBubbleChartOnValueSelectListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/listener/DummyColumnChartOnValueSelectListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/listener/DummyCompoLineColumnChartOnValueSelectListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/listener/DummyLineChartOnValueSelectListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/listener/DummyPieChartOnValueSelectListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/listener/DummyVieportChangeListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/listener/LineChartOnValueSelectListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/listener/OnValueDeselectListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/listener/PieChartOnValueSelectListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/listener/ViewportChangeListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/AbstractChartData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/Axis.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/AxisValue.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/BubbleChartData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/BubbleValue.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/ChartData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/Column.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/ColumnChartData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/ComboLineColumnChartData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/Line.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/LineChartData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/PieChartData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/PointValue.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/SelectedValue.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/SliceValue.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/SubcolumnValue.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/ValueShape.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/Viewport.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/provider/BubbleChartDataProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/provider/ColumnChartDataProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/provider/ComboLineColumnChartDataProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/provider/LineChartDataProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/provider/PieChartDataProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/renderer/AbstractChartRenderer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/renderer/AxesRenderer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/renderer/BubbleChartRenderer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/renderer/ChartRenderer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/renderer/ColumnChartRenderer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/renderer/ComboChartRenderer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/renderer/ComboLineColumnChartRenderer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/renderer/LineChartRenderer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/renderer/PieChartRenderer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/renderer/PreviewColumnChartRenderer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/renderer/PreviewLineChartRenderer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/util/AxisAutoValues.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/util/ChartUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/util/FloatUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/view/AbstractChartView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/view/BubbleChartView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/view/Chart.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/view/ColumnChartView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/view/ComboLineColumnChartView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/view/LineChartView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/view/PieChartView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/view/PreviewColumnChartView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/view/PreviewLineChartView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/view/hack/HackyDrawerLayout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/view/hack/HackyViewPager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_lib/src/main/java/com/example/test_lib/DimenTools.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/ic_launcher-web.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_mockito_mockito_core_1_10_19_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_objenesis_objenesis_2_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/.settings/gradle/org.springsource.ide.eclipse.gradle.core.prefs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/MPChartLib.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/build.gradle" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/proguard-project.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/project.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/AndroidManifest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/animation/ChartAnimator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/animation/Easing.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/animation/EasingFunction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/buffer/AbstractBuffer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/buffer/BarBuffer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/buffer/HorizontalBarBuffer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/charts/BarChart.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/charts/BarLineChartBase.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/charts/BubbleChart.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/charts/CandleStickChart.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/charts/Chart.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/charts/CombinedChart.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/charts/HorizontalBarChart.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/charts/LineChart.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/charts/PieChart.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/charts/PieRadarChartBase.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/charts/RadarChart.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/charts/ScatterChart.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/components/AxisBase.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/components/ComponentBase.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/components/Description.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/components/IMarker.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/components/Legend.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/components/LegendEntry.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/components/LimitLine.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/components/MarkerImage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/components/MarkerView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/components/XAxis.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/components/YAxis.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/BarData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/BarDataSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/BarEntry.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/BarLineScatterCandleBubbleData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/BarLineScatterCandleBubbleDataSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/BaseDataSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/BaseEntry.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/BubbleData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/BubbleDataSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/BubbleEntry.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/CandleData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/CandleDataSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/CandleEntry.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/ChartData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/CombinedData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/DataSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/Entry.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/LineData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/LineDataSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/LineRadarDataSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/LineScatterCandleRadarDataSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/PieData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/PieDataSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/PieEntry.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/RadarData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/RadarDataSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/RadarEntry.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/ScatterData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/ScatterDataSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/filter/Approximator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/exception/DrawingDataSetNotCreatedException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/formatter/ColorFormatter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/formatter/DefaultAxisValueFormatter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/formatter/DefaultFillFormatter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/formatter/DefaultValueFormatter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/formatter/IAxisValueFormatter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/formatter/IFillFormatter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/formatter/IValueFormatter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/formatter/IndexAxisValueFormatter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/formatter/LargeValueFormatter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/formatter/PercentFormatter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/formatter/StackedValueFormatter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/highlight/BarHighlighter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/highlight/ChartHighlighter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/highlight/CombinedHighlighter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/highlight/Highlight.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/highlight/HorizontalBarHighlighter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/highlight/IHighlighter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/highlight/PieHighlighter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/highlight/PieRadarHighlighter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/highlight/RadarHighlighter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/highlight/Range.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/interfaces/dataprovider/BarDataProvider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/interfaces/dataprovider/BarLineScatterCandleBubbleDataProvider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/interfaces/dataprovider/BubbleDataProvider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/interfaces/dataprovider/CandleDataProvider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/interfaces/dataprovider/ChartInterface.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/interfaces/dataprovider/CombinedDataProvider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/interfaces/dataprovider/LineDataProvider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/interfaces/dataprovider/ScatterDataProvider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/interfaces/datasets/IBarDataSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/interfaces/datasets/IBarLineScatterCandleBubbleDataSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/interfaces/datasets/IBubbleDataSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/interfaces/datasets/ICandleDataSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/interfaces/datasets/IDataSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/interfaces/datasets/ILineDataSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/interfaces/datasets/ILineRadarDataSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/interfaces/datasets/ILineScatterCandleRadarDataSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/interfaces/datasets/IPieDataSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/interfaces/datasets/IRadarDataSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/interfaces/datasets/IScatterDataSet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/jobs/AnimatedMoveViewJob.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/jobs/AnimatedViewPortJob.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/jobs/AnimatedZoomJob.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/jobs/MoveViewJob.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/jobs/ViewPortJob.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/jobs/ZoomJob.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/listener/BarLineChartTouchListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/listener/ChartTouchListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/listener/OnChartGestureListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/listener/OnChartValueSelectedListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/listener/OnDrawLineChartTouchListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/listener/OnDrawListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/listener/PieRadarChartTouchListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/matrix/Vector3.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/AxisRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/BarChartRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/BarLineScatterCandleBubbleRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/BubbleChartRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/CandleStickChartRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/CombinedChartRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/DataRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/HorizontalBarChartRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/LegendRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/LineChartRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/LineRadarRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/LineScatterCandleRadarRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/PieChartRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/RadarChartRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/Renderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/ScatterChartRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/XAxisRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/XAxisRendererHorizontalBarChart.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/XAxisRendererRadarChart.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/YAxisRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/YAxisRendererHorizontalBarChart.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/YAxisRendererRadarChart.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/scatter/ChevronDownShapeRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/scatter/ChevronUpShapeRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/scatter/CircleShapeRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/scatter/CrossShapeRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/scatter/IShapeRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/scatter/SquareShapeRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/scatter/TriangleShapeRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/scatter/XShapeRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/utils/ColorTemplate.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/utils/EntryXComparator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/utils/FSize.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/utils/FileUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/utils/HorizontalViewPortHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/utils/MPPointD.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/utils/MPPointF.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/utils/ObjectPool.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/utils/Transformer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/utils/TransformerHorizontalBarChart.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/utils/Utils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/utils/ViewPortHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/test/java/com/github/mikephil/charting/test/ApproximatorTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/test/java/com/github/mikephil/charting/test/AxisRendererTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/test/java/com/github/mikephil/charting/test/BarDataTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/test/java/com/github/mikephil/charting/test/ChartDataTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/test/java/com/github/mikephil/charting/test/DataSetTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/test/java/com/github/mikephil/charting/test/LargeValueFormatterTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MPChartLib/src/test/java/com/github/mikephil/charting/test/ObjectPoolTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
@@ -146,7 +200,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/charts/HelloChartsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/charts/HelloChartsActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_hello_charts.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_hello_charts.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hellocharts-library/hellocharts-library.iml" afterPath="$PROJECT_DIR$/hellocharts-library/hellocharts-library.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
@@ -178,41 +234,83 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="activity_hello_charts.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_hello_charts.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
+      <file leaf-file-name="HelloChartsActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/charts/HelloChartsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+            <state relative-caret-position="1939">
+              <caret line="203" column="60" lean-forward="false" selection-start-line="203" selection-start-column="60" selection-end-line="203" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2187#2379#0" expanded="true" />
+                <element signature="e#2378#2379#0" expanded="true" />
+                <element signature="e#7215#7638#0" expanded="true" />
+                <element signature="e#7637#7638#0" expanded="true" />
+                <element signature="e#10046#10655#0" expanded="true" />
+                <element signature="e#10654#10655#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ColumnChartData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/ColumnChartData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="11" column="47" lean-forward="false" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HelloChartsActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/charts/HelloChartsActivity.java">
+      <file leaf-file-name="AbstractChartData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/AbstractChartData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="64" column="57" lean-forward="false" selection-start-line="64" selection-start-column="57" selection-end-line="64" selection-end-column="57" />
+            <state relative-caret-position="-1355">
+              <caret line="10" column="53" lean-forward="false" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChartData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/ChartData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="39">
+              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ColumnChartView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/view/ColumnChartView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="341">
+              <caret line="40" column="26" lean-forward="false" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="26" />
               <folding>
-                <element signature="e#1028#1182#0" expanded="true" />
-                <element signature="e#1181#1182#0" expanded="true" />
+                <element signature="e#1529#1530#0" expanded="true" />
+                <element signature="e#1556#1557#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AxisValue.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/AxisValue.java">
+      <file leaf-file-name="AbstractChartView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/view/AbstractChartView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-              <folding>
-                <element signature="e#369#370#0" expanded="true" />
-                <element signature="e#400#401#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="358">
+              <caret line="472" column="51" lean-forward="false" selection-start-line="472" selection-start-column="51" selection-end-line="472" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Viewport.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/Viewport.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-935">
+              <caret line="12" column="45" lean-forward="false" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -235,6 +333,7 @@
       <find>ondraw</find>
       <find>getconn</find>
       <find>clear</find>
+      <find>setBarSpace</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -265,6 +364,10 @@
               <ExternalProjectPojo>
                 <option name="name" value="Mine" />
                 <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value=":MPChartLib" />
+                <option name="path" value="$PROJECT_DIR$/MPChartLib" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
                 <option name="name" value=":app" />
@@ -307,6 +410,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="jarDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="assembleDebugUnitTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -326,6 +433,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="transformClassesAndResourcesWithPrepareIntermediateJarsForDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="javadocJar" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Runs all device checks using Device Providers and Test Servers." />
@@ -411,21 +522,20 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="javadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="processReleaseUnitTestJavaRes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Generates Javadoc API documentation for the main source code." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="javadoc" />
+                <option name="name" value="transformClassesAndResourcesWithSyncLibJarsForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Uninstalls the Release build." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="uninstallRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="transformClassesAndResourcesWithSyncLibJarsForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -539,13 +649,13 @@
                 <option name="name" value="processDebugAndroidTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="validateSigningDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="extractReleaseAnnotations" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="validateSigningDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -566,6 +676,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="mergeReleaseShaders" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="sourcesJar" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -1035,6 +1149,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="jarRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="compileDebugShaders" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -1115,6 +1233,702 @@
               <ExternalTaskPojo>
                 <option name="description" value="Displays the properties of root project 'Mine'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="properties" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/MPChartLib">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of project ':MPChartLib'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="packageReleaseResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="mergeReleaseConsumerProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="validateSigningDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="transformNativeLibsWithSyncJniLibsForRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="assembleReleaseUnitTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="transformClassesAndResourcesWithPrepareIntermediateJarsForRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles a bundle containing the library in debug." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="bundleDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="processReleaseJavaRes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="generateReleaseAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="jarDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs lint on the Debug build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="lintDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles a bundle containing the library in release." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="bundleRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="assembleDebugUnitTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Creates a version of android.jar that's suitable for unit tests." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="mockableAndroidJar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of project ':MPChartLib'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from project ':MPChartLib'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="tasks" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="compileDebugSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="transformClassesAndResourcesWithPrepareIntermediateJarsForDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="packageReleaseRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="javadocJar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all device checks using Device Providers and Test Servers." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="deviceCheck" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="transformNativeLibsWithIntermediateJniLibsForRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in project ':MPChartLib'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="processDebugResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="transformNativeLibsWithStripDebugSymbolForRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs lint on all variants." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="lint" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="compileReleaseNdk" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="generateDebugResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="compileDebugJavaWithJavac" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="generateDebugAndroidTestBuildConfig" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="processDebugUnitTestJavaRes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Run unit tests for the release build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="testReleaseUnitTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build cache directory." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="cleanBuildCache" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="assembleDefault" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="compileDebugAndroidTestShaders" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="mergeDebugShaders" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="compileDebugAndroidTestJavaWithJavac" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by project ':MPChartLib'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="compileReleaseRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles all Debug builds." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="assembleDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="processDebugAndroidTestManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="compileDebugUnitTestJavaWithJavac" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="transformResourcesWithMergeJavaResForReleaseUnitTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="preDebugAndroidTestBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Extracts Android annotations for the debug variant into the archive file" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="extractDebugAnnotations" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="processDebugAndroidTestJavaRes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="javadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="processReleaseUnitTestJavaRes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="javaPreCompileDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="transformClassesAndResourcesWithSyncLibJarsForRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="compileReleaseShaders" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="mergeReleaseResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="transformNativeLibsWithIntermediateJniLibsForDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="generateDebugAndroidTestSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="transformClassesAndResourcesWithSyncLibJarsForDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="checkReleaseManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="javaPreCompileDebugUnitTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="verifyReleaseResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="packageDebugResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="transformNativeLibsWithSyncJniLibsForDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="compileDebugAndroidTestSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="mergeReleaseJniLibFolders" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="prepareLintJar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="processReleaseResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs and runs instrumentation tests using all Device Providers." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="deviceAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="mergeDebugAndroidTestAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="processReleaseManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Uninstalls the android (on device) tests for the Debug build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="uninstallDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in project ':MPChartLib'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="generateReleaseSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="preReleaseBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles all variants of all applications and secondary packages." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="createFullJarDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays a help message." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="help" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="compileReleaseUnitTestSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs the android (on device) tests for the Debug build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="installDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="transformClassesWithDexBuilderForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="mergeDebugAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="javaPreCompileReleaseUnitTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="javaPreCompileRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all device checks on currently connected devices." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="connectedCheck" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs and runs the tests for debug on connected devices." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="connectedDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Uninstall all applications." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="uninstallAll" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="transformNativeLibsWithMergeJniLibsForDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles all the Test applications." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="assembleAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="processDebugAndroidTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Extracts Android annotations for the release variant into the archive file" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="extractReleaseAnnotations" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="compileDebugAidl" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="mergeDebugResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="preDebugUnitTestBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="compileLint" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="generateDebugAndroidTestResValues" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="transformNativeLibsWithMergeJniLibsForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="mergeReleaseShaders" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="sourcesJar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the Android dependencies of the project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="androidDependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="compileDebugAndroidTestNdk" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="compileDebugUnitTestSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="transformNativeLibsWithMergeJniLibsForRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="transformDexArchiveWithExternalLibsDexMergerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="generateDebugSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="mergeDebugAndroidTestJniLibFolders" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="extractProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="assembleDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="processDebugJavaRes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="consumeConfigAttr" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="generateDebugAndroidTestAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="compileReleaseJavaWithJavac" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="transformResourcesWithMergeJavaResForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Run unit tests for all variants." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="transformNativeLibsWithStripDebugSymbolForDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="compileDebugNdk" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="mergeDebugAndroidTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="preReleaseUnitTestBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="generateDebugResValues" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="javaPreCompileDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Run unit tests for the debug build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="testDebugUnitTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Installs and runs instrumentation tests for all flavors on connected devices." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="connectedAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="preBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="transformResourcesWithMergeJavaResForRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="compileReleaseSources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="compileReleaseUnitTestJavaWithJavac" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="jarRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="compileDebugShaders" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="transformResourcesWithMergeJavaResForDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="compileReleaseAidl" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs lint on the Release build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="lintRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="generateDebugAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="transformDexArchiveWithDexMergerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the dependent components of components in project ':MPChartLib'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="dependentComponents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in project ':MPChartLib'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="buildEnvironment" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="checkDebugManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="mergeDebugJniLibFolders" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prints out all the source sets defined in this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="sourceSets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="transformResourcesWithMergeJavaResForDebugUnitTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="mergeReleaseAssets" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="createFullJarRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="compileDebugRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="packageDebugRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="generateReleaseBuildConfig" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="generateReleaseResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="platformAttrExtractor" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the signing info for each variant." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="signingReport" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="compileDebugAndroidTestAidl" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="mergeDebugAndroidTestShaders" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="preDebugBuild" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="generateDebugBuildConfig" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles all Release builds." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="assembleRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="resolveConfigAttr" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="mergeDebugConsumerProguardFiles" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="compileDebugAndroidTestRenderscript" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="generateDebugAndroidTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="processDebugManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="packageDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
+                <option name="name" value="generateReleaseResValues" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of project ':MPChartLib'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/MPChartLib" />
                 <option name="name" value="properties" />
               </ExternalTaskPojo>
             </list>
@@ -2708,6 +3522,84 @@
                       </ExternalModuleBuildClasspathPojo>
                     </value>
                   </entry>
+                  <entry key="$PROJECT_DIR$/MPChartLib">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="entries">
+                          <list>
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/3.0.1/gradle-3.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-core/3.0.1/gradle-core-3.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/3.0.1/builder-3.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint/26.0.1/lint-26.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/org-jetbrains/uast/26.0.1/uast-26.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-api/3.0.1/gradle-api-3.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/compilerCommon/3.0.1/compilerCommon-3.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/jetbrains/kotlin/kotlin-stdlib/1.1.3-2/kotlin-stdlib-1.1.3-2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/transform-api/2.0.0-deprecated-use-gradle-api/transform-api-2.0.0-deprecated-use-gradle-api.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm/5.1/asm-5.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-analysis/5.1/asm-analysis-5.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-commons/5.1/asm-commons-5.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-util/5.1/asm-util-5.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/jacoco/org.jacoco.core/0.7.4.201502262128/org.jacoco.core-0.7.4.201502262128.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/jacoco/org.jacoco.report/0.7.4.201502262128/org.jacoco.report-0.7.4.201502262128.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/jopt-simple/jopt-simple/4.9/jopt-simple-4.9.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-gradle/5.3.3/proguard-gradle-5.3.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/protobuf/protobuf-java/3.0.0/protobuf-java-3.0.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/3.0.1/builder-model-3.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-test-api/3.0.1/builder-test-api-3.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdklib/26.0.1/sdklib-26.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdk-common/26.0.1/sdk-common-26.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/common/26.0.1/common-26.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/manifest-merger/26.0.1/manifest-merger-26.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/ddms/ddmlib/26.0.1/ddmlib-26.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/protos/26.0.1/protos-26.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/shared/26.0.1/shared-26.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/tracker/26.0.1/tracker-26.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/apksig/3.0.1/apksig-3.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/squareup/javawriter/2.5.0/javawriter-2.5.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcpkix-jdk15on/1.56/bcpkix-jdk15on-1.56.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcprov-jdk15on/1.56/bcprov-jdk15on-1.56.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-tree/5.1/asm-tree-5.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/it/unimi/dsi/fastutil/7.2.0/fastutil-7.2.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/googlecode/json-simple/json-simple/1.1/json-simple-1.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-checks/26.0.1/lint-checks-26.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/eclipse/jdt/core/compiler/ecj/4.6.1/ecj-4.6.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/guava/guava/22.0/guava-22.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/baseLibrary/3.0.1/baseLibrary-3.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/antlr/antlr4/4.5.3/antlr4-4.5.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-io/commons-io/2.4/commons-io-2.4.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/googlecode/juniversalchardet/juniversalchardet/1.0.3/juniversalchardet-1.0.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/annotations/26.0.1/annotations-26.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-base/5.3.3/proguard-base-5.3.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/layoutlib/layoutlib-api/26.0.1/layoutlib-api-26.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/dvlib/26.0.1/dvlib-26.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/repository/26.0.1/repository-26.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/code/gson/gson/2.3/gson-2.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/commons/commons-compress/1.12/commons-compress-1.12.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpclient/4.2.6/httpclient-4.2.6.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/26.0.1/lint-api-26.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/jimfs/jimfs/1.1/jimfs-1.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpcore/4.2.5/httpcore-4.2.5.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/com-intellij/intellij-core/26.0.1/intellij-core-26.0.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/lombok/lombok-ast/0.2.3/lombok-ast-0.2.3.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/jetbrains/kotlin/kotlin-reflect/1.1.3-2/kotlin-reflect-1.1.3-2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/jetbrains/annotations/13.0/annotations-13.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/jetbrains/trove4j/trove4j/20160824/trove4j-20160824.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/errorprone/error_prone_annotations/2.0.18/error_prone_annotations-2.0.18.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar" />
+                          </list>
+                        </option>
+                        <option name="path" value="$PROJECT_DIR$/MPChartLib" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
                   <entry key="$PROJECT_DIR$/app">
                     <value>
                       <ExternalModuleBuildClasspathPojo>
@@ -3032,7 +3924,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/camera/CameraUtil.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/GAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/camera/ClipImageView.java" />
@@ -3077,10 +3968,11 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/blet/BluetoothLeService.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_mirrot.xml" />
         <option value="$PROJECT_DIR$/test_lib/src/main/java/com/example/test_lib/DimenTools.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/hellocharts-library/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/settings.gradle" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/MPChartLib/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_hello_charts.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/charts/HelloChartsActivity.java" />
       </list>
@@ -3132,7 +4024,133 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="hellocharts-library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hellocharts-library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hellocharts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hellocharts-library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hellocharts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="listener" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hellocharts-library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hellocharts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gesture" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hellocharts-library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hellocharts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="formatter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hellocharts-library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hellocharts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="computator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -3147,104 +4165,11 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myapplication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myapplication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="charts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -3355,15 +4280,18 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="D:/Program Files/Android" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/libs/hellocharts/hellocharts-android" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="device.picker.selection" value="810EBMB3XWHU" />
+    <property name="device.picker.selection" value="0123456789ABCDEF" />
     <property name="android.profiler.active" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/AndroidCode/Mine/app/src/main/java/com/example/administrator/myapplication/spp/SppManager.java" />
     <property name="VectorAssetImportPath" value="C:\Users\Administrator\Downloads" />
@@ -3534,7 +4462,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1517307014677" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1517480495582" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -3582,7 +4510,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1517307014677" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1517480495582" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -3765,7 +4693,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1517307014677" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1517480495585" />
       </method>
     </configuration>
     <list size="4">
@@ -3877,7 +4805,14 @@
       <option name="project" value="LOCAL" />
       <updated>1516873690792</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="simple column chart">
+      <created>1517307061908</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1517307061908</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3901,11 +4836,10 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45779222" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41774893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50108224" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -3923,6 +4857,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -3965,7 +4900,8 @@
     <MESSAGE value="TestClass test" />
     <MESSAGE value="byte deal" />
     <MESSAGE value="BLE" />
-    <option name="LAST_COMMIT_MESSAGE" value="BLE" />
+    <MESSAGE value="simple column chart" />
+    <option name="LAST_COMMIT_MESSAGE" value="simple column chart" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3974,309 +4910,86 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_ble_connect.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/formatter/AxisValueFormatter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="85">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/spp/GetConnectedBluetoothDeviceFromSystem.java">
+    <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/gesture/ZoomType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/AndroidStudio/Android/sdk/sources/android-26/java/io/InputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1129">
-          <caret line="99" column="15" lean-forward="false" selection-start-line="99" selection-start-column="15" selection-end-line="99" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/spp/MessageActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="99" column="13" lean-forward="false" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/spp/TranProtocalAnalysis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="218" column="7" lean-forward="true" selection-start-line="218" selection-start-column="7" selection-end-line="218" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/ble/IBleConnectCallback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="9" lean-forward="false" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/AndroidStudio/Android/sdk/sources/android-26/android/bluetooth/BluetoothProfile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="51" column="28" lean-forward="false" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/AndroidStudio/Android/sdk/sources/android-26/android/bluetooth/le/ScanCallback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="63" column="67" lean-forward="true" selection-start-line="63" selection-start-column="67" selection-end-line="63" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/spp/SppBluetoothManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="346" column="0" lean-forward="false" selection-start-line="346" selection-start-column="0" selection-end-line="346" selection-end-column="0" />
+        <state relative-caret-position="34">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/MineApplication.java">
+    <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/SelectedValue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="2" lean-forward="false" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/ble/BleBluetoothManager.java">
+    <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/renderer/ChartRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="272" column="80" lean-forward="false" selection-start-line="272" selection-start-column="80" selection-end-line="272" selection-end-column="80" />
-          <folding />
+        <state relative-caret-position="-131">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/ble/BleScanActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="56" column="94" lean-forward="false" selection-start-line="56" selection-start-column="94" selection-end-line="56" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/ble/BleConnectActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="117" column="69" lean-forward="false" selection-start-line="117" selection-start-column="69" selection-end-line="117" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/AndroidStudio/Android/sdk/sources/android-26/android/media/MediaRecorder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1597">
-          <caret line="240" column="32" lean-forward="false" selection-start-line="240" selection-start-column="32" selection-end-line="240" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/headset/AudioMediaPlayManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1819">
-          <caret line="195" column="46" lean-forward="true" selection-start-line="195" selection-start-column="46" selection-end-line="195" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/AndroidStudio/Android/sdk/sources/android-26/android/media/AudioManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="1293" column="28" lean-forward="false" selection-start-line="1293" selection-start-column="28" selection-end-line="1293" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/headset/newmanager/AudioMediaPlayManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="934">
-          <caret line="196" column="34" lean-forward="true" selection-start-line="196" selection-start-column="34" selection-end-line="196" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/headset/HeadSetActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_lib/src/main/java/com/example/test_lib/TestClass.java">
+    <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/animation/ChartAnimationListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/AndroidStudio/Android/sdk/sources/android-26/android/bluetooth/BluetoothGattCallback.java">
+    <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/view/Chart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="106" column="57" lean-forward="true" selection-start-line="106" selection-start-column="57" selection-end-line="106" selection-end-column="57" />
+        <state relative-caret-position="299">
+          <caret line="139" column="16" lean-forward="false" selection-start-line="139" selection-start-column="16" selection-end-line="139" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/AndroidStudio/Android/sdk/sources/android-26/android/bluetooth/BluetoothGattCharacteristic.java">
+    <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/computator/ChartComputator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        <state relative-caret-position="299">
+          <caret line="305" column="16" lean-forward="false" selection-start-line="305" selection-start-column="16" selection-end-line="305" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/listener/ViewportChangeListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="16" column="34" lean-forward="false" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        <state relative-caret-position="238">
+          <caret line="14" column="38" lean-forward="false" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/Axis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="906">
+          <caret line="293" column="5" lean-forward="false" selection-start-line="293" selection-start-column="5" selection-end-line="293" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/AndroidStudio/Android/sdk/sources/android-26/android/bluetooth/BluetoothDevice.java">
+    <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/SubcolumnValue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="1123" column="25" lean-forward="false" selection-start-line="1123" selection-start-column="25" selection-end-line="1123" selection-end-column="25" />
+        <state relative-caret-position="748">
+          <caret line="55" column="17" lean-forward="false" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/blet/IBluzScanHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="48" column="9" lean-forward="false" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/AndroidStudio/Android/sdk/sources/android-26/android/bluetooth/le/BluetoothLeScanner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="111" column="16" lean-forward="false" selection-start-line="111" selection-start-column="16" selection-end-line="111" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/blet/BluzScanHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2261">
-          <caret line="171" column="67" lean-forward="false" selection-start-line="171" selection-start-column="67" selection-end-line="171" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/blet/BleScantActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="59" column="35" lean-forward="false" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/AndroidStudio/Android/sdk/sources/android-26/android/bluetooth/BluetoothGattDescriptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3196">
-          <caret line="209" column="16" lean-forward="false" selection-start-line="209" selection-start-column="16" selection-end-line="209" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/blet/BletConnectActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="85" column="57" lean-forward="false" selection-start-line="85" selection-start-column="57" selection-end-line="85" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_lib/src/main/java/com/example/test_lib/myClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="73" column="45" lean-forward="true" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_mirrot.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/AndroidStudio/Android/sdk/sources/android-26/android/bluetooth/BluetoothGatt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14382">
-          <caret line="911" column="19" lean-forward="false" selection-start-line="911" selection-start-column="19" selection-end-line="911" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="117" column="38" lean-forward="false" selection-start-line="117" selection-start-column="38" selection-end-line="117" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-sw240dp/dimens.xml">
+    <entry file="file://$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/filter/Approximator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-sw300dp/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1304">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_lib/src/main/java/com/example/test_lib/DimenTools.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/blet/BluetoothLeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="255" column="0" lean-forward="false" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/blet/BluzManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="838">
-          <caret line="106" column="59" lean-forward="false" selection-start-line="106" selection-start-column="59" selection-end-line="106" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/gradle/gradle-4.1/lib/gradle-core-4.1.jar!/org/gradle/api/Project.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="98" column="12" lean-forward="false" selection-start-line="98" selection-start-column="12" selection-end-line="98" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4288,94 +5001,350 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hellocharts-library/res/values/styles.xml">
+    <entry file="file://$PROJECT_DIR$/test_lib/src/main/java/com/example/test_lib/DimenTools.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hellocharts-library/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="391">
+          <caret line="29" column="50" lean-forward="true" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="30" lean-forward="false" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+          <caret line="0" column="64" lean-forward="true" selection-start-line="0" selection-start-column="64" selection-end-line="0" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hellocharts-library/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="24" />
+        <state relative-caret-position="510">
+          <caret line="30" column="39" lean-forward="false" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/MPChartLib/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="31" column="61" lean-forward="true" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/SubcolumnValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="48" column="25" lean-forward="false" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="25" />
+        <state relative-caret-position="141">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_hello_charts.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/BarData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        <state relative-caret-position="299">
+          <caret line="23" column="42" lean-forward="false" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="42" />
+          <folding>
+            <element signature="e#522#523#0" expanded="false" />
+            <element signature="e#553#554#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/charts/BarChart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/AndroidStudio/Android/sdk/sources/android-26/android/service/autofill/Dataset.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="51" column="19" lean-forward="false" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/BarEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="42" column="10" lean-forward="false" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+          <folding>
+            <element signature="e#944#945#0" expanded="false" />
+            <element signature="e#971#972#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/Entry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="31" column="11" lean-forward="false" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/components/XAxis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="58" column="58" lean-forward="false" selection-start-line="58" selection-start-column="58" selection-end-line="58" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/components/ComponentBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="160" column="16" lean-forward="false" selection-start-line="160" selection-start-column="16" selection-end-line="160" selection-end-column="16" />
+          <folding>
+            <element signature="e#3619#3620#0" expanded="false" />
+            <element signature="e#3653#3654#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/interfaces/datasets/IDataSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7200">
+          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/interfaces/datasets/IBarLineScatterCandleBubbleDataSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="82" lean-forward="false" selection-start-line="7" selection-start-column="82" selection-end-line="7" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/interfaces/datasets/IBarDataSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="56" lean-forward="false" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/DataSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-544">
+          <caret line="14" column="71" lean-forward="true" selection-start-line="14" selection-start-column="71" selection-end-line="14" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/components/AxisBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="332" column="16" lean-forward="false" selection-start-line="332" selection-start-column="16" selection-end-line="332" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/components/YAxis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="360" column="57" lean-forward="false" selection-start-line="360" selection-start-column="57" selection-end-line="360" selection-end-column="57" />
+          <folding>
+            <element signature="e#4161#4162#0" expanded="false" />
+            <element signature="e#4203#4204#0" expanded="false" />
+            <element signature="e#4704#4705#0" expanded="false" />
+            <element signature="e#4749#4750#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/renderer/YAxisRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="99" column="29" lean-forward="false" selection-start-line="99" selection-start-column="29" selection-end-line="99" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/charts/BarLineChartBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="330" column="0" lean-forward="false" selection-start-line="330" selection-start-column="0" selection-end-line="330" selection-end-column="0" />
+          <folding>
+            <element signature="e#47985#47986#0" expanded="false" />
+            <element signature="e#48025#48026#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/BarDataSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1066">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="e#4517#4518#0" expanded="false" />
+            <element signature="e#4556#4557#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/utils/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="500" column="23" lean-forward="false" selection-start-line="500" selection-start-column="23" selection-end-line="500" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/listener/BarLineChartTouchListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2856">
+          <caret line="242" column="43" lean-forward="false" selection-start-line="242" selection-start-column="43" selection-end-line="242" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPChartLib/src/main/java/com/github/mikephil/charting/data/BarLineScatterCandleBubbleDataSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="35" column="32" lean-forward="false" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="32" />
+          <folding>
+            <element signature="e#926#927#0" expanded="false" />
+            <element signature="e#965#966#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/AndroidStudio/Android/sdk/sources/android-26/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="565" column="6" lean-forward="false" selection-start-line="565" selection-start-column="6" selection-end-line="565" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/AxisValue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        <state relative-caret-position="90">
+          <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/gesture/ChartScroller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-420">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/Viewport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-935">
+          <caret line="12" column="45" lean-forward="false" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/AndroidStudio/Android/sdk/sources/android-26/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="24792" column="38" lean-forward="false" selection-start-line="24792" selection-start-column="38" selection-end-line="24792" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/appcompat-v7/26.1.0/2b34456c30d6b6e5db5fa3e8fa02f6cebd5531fd/appcompat-v7-26.1.0-sources.jar!/android/support/v7/widget/TooltipCompatHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="107" column="19" lean-forward="false" selection-start-line="107" selection-start-column="19" selection-end-line="107" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/listener/DummyColumnChartOnValueSelectListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/listener/ColumnChartOnValueSelectListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/view/AbstractChartView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="472" column="51" lean-forward="false" selection-start-line="472" selection-start-column="51" selection-end-line="472" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/view/ColumnChartView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="40" column="26" lean-forward="false" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="26" />
           <folding>
-            <element signature="e#369#370#0" expanded="true" />
-            <element signature="e#400#401#0" expanded="true" />
+            <element signature="e#1529#1530#0" expanded="true" />
+            <element signature="e#1556#1557#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/Column.java">
+    <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/ChartData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="71" column="18" lean-forward="false" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
+        <state relative-caret-position="39">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/AbstractChartData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1355">
+          <caret line="10" column="53" lean-forward="false" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hellocharts-library/src/lecho/lib/hellocharts/model/ColumnChartData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="47" lean-forward="false" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/myapplication/charts/HelloChartsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="64" column="57" lean-forward="false" selection-start-line="64" selection-start-column="57" selection-end-line="64" selection-end-column="57" />
+        <state relative-caret-position="1939">
+          <caret line="203" column="60" lean-forward="false" selection-start-line="203" selection-start-column="60" selection-end-line="203" selection-end-column="60" />
           <folding>
-            <element signature="e#1028#1182#0" expanded="true" />
-            <element signature="e#1181#1182#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2187#2379#0" expanded="true" />
+            <element signature="e#2378#2379#0" expanded="true" />
+            <element signature="e#7215#7638#0" expanded="true" />
+            <element signature="e#7637#7638#0" expanded="true" />
+            <element signature="e#10046#10655#0" expanded="true" />
+            <element signature="e#10654#10655#0" expanded="true" />
           </folding>
         </state>
       </provider>
