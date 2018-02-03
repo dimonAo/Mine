@@ -304,6 +304,7 @@ public class AxesRenderer {
                 nameBaselineTab[position] = computator.getContentRectMinusAxesMargins().bottom + axisMargin
                         + labelTextAscentTab[position];
             } else {
+                /***/
                 labelBaselineTab[position] = computator.getContentRectMinusAxesMargins().bottom + axisMargin
                         + labelTextAscentTab[position];
                 nameBaselineTab[position] = labelBaselineTab[position] + axisMargin +

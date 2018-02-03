@@ -2,6 +2,8 @@ package com.example.administrator.myapplication.charts;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -38,7 +40,7 @@ public class HelloChartsActivity extends AppCompatActivity {
     private ColumnChartView column_chart;
     private BarChart bar_chart;
 
-    private int mColumnNum = 30;
+    private int mColumnNum = 10;
     private int mCount;
     int maxNum = 0;
 
@@ -254,7 +256,6 @@ public class HelloChartsActivity extends AppCompatActivity {
 
 
         /**按照值的最高数值设置Y轴坐标*/
-        Log.e("TAG", "maxNum : " + maxNum);
         for (int i = 0; i < (maxNum * 3 / 2); i += 200) {
             mAxisYValues.add(new AxisValue(i).setLabel((i) + ""));
         }
@@ -274,6 +275,7 @@ public class HelloChartsActivity extends AppCompatActivity {
 
         mColumnChartData.setAxisXBottom(mXBottom);
         mColumnChartData.setAxisYLeft(mYLeft);
+        mChart.setViewportCalculationEnabled(true);
         mChart.setColumnChartData(mColumnChartData);
 
 //        final float firstXValue = mAxisXValues.get(0).getValue();
@@ -283,18 +285,18 @@ public class HelloChartsActivity extends AppCompatActivity {
         Viewport v = new Viewport(mChart.getMaximumViewport());
         v.top = (maxNum * 3 / 2f);
         v.bottom = 0.0f;
+//        v.right = columnCount+5;
+//        v.set(columnCount, (maxNum * 3 / 2f), (columnCount + 5), 0.0f);
         mChart.setMaximumViewport(v);
-        v.left = mColumnNum - 5;
-        v.right = mColumnNum;
+//        v.set((float) columnCount + 0, (maxNum * 3 / 2f) + 0, (columnCount + 5), 0.0f);
+        v.left = columnCount;
+        v.right = columnCount + 5;
         mChart.setCurrentViewport(v);
 //        Viewport v1 = new Viewport(0, mChart.getMaximumViewport().height(), (mColumnNum > 5 ? 5 : mColumnNum), 0);
 ////        v.left = 5f;
 ////        v.right = 10f;
 ////        v.offsetTo(columnCount, v.top);
 //        mChart.setCurrentViewport(v1);
-
-        Log.e("TAG", "v left : " + v.left + " v right : " + v.right);
-
 
         mChart.setViewportChangeListener(new ViewportChangeListener() {
             @Override
@@ -306,13 +308,27 @@ public class HelloChartsActivity extends AppCompatActivity {
                     Log.e("TAG", "load data left ");
 //                    Toast.makeText(HelloChartsActivity.this, "left ", Toast.LENGTH_SHORT).show();
                     Snackbar.make(column_chart, "load data left", Snackbar.LENGTH_SHORT).show();
-                    loadData(column_chart, 5);
+                    mHandler.sendEmptyMessage(1);
                 }
             }
         });
 
         mCount = 0;
 
+    }
+
+
+    private Handler mHandler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            if(msg.what == 1){
+                load(column_chart);
+            }
+        }
+    };
+
+    private void load(ColumnChartView mChartView) {
+        loadData(mChartView, 1);
     }
 
 

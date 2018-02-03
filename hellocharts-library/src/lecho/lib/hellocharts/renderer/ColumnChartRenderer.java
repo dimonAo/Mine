@@ -94,6 +94,7 @@ public class ColumnChartRenderer extends AbstractChartRenderer {
         }
     }
 
+    @Override
     public void draw(Canvas canvas) {
         final ColumnChartData data = dataProvider.getColumnChartData();
         if (data.isStacked()) {
@@ -206,17 +207,20 @@ public class ColumnChartRenderer extends AbstractChartRenderer {
                                             int mode) {
         // For n subcolumns there will be n-1 spacing and there will be one
         // subcolumn for every columnValue
+        //每个柱子的宽度，最小为1px
         float subcolumnWidth = (columnWidth - (subcolumnSpacing * (column.getValues().size() - 1)))
                 / column.getValues().size();
         if (subcolumnWidth < 1) {
             subcolumnWidth = 1;
         }
         // Columns are indexes from 0 to n, column index is also column X value
+        //
         final float rawX = computator.computeRawX(columnIndex);
         final float halfColumnWidth = columnWidth / 2;
         final float baseRawY = computator.computeRawY(baseValue);
         // First subcolumn will starts at the left edge of current column,
         // rawValueX is horizontal center of that column
+        //X轴label位置中心点为柱子的横轴中心点
         float subcolumnRawX = rawX - halfColumnWidth;
         int valueIndex = 0;
         for (SubcolumnValue columnValue : column.getValues()) {

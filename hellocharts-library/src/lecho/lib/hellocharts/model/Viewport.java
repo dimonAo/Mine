@@ -111,6 +111,7 @@ public class Viewport implements Parcelable {
      * result may be negative.
      */
     public final float width() {
+
         return right - left;
     }
 
