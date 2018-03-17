@@ -103,6 +103,14 @@
     <dimen name="common_260">650dp</dimen>
     <dimen name="common_280">700dp</dimen>
     <dimen name="common_300">750dp</dimen>
+    <dimen name="common_negative_40">-100dp</dimen>
+    <dimen name="common_negative_38">-95dp</dimen>
+    <dimen name="common_negative_36">-90dp</dimen>
+    <dimen name="common_negative_34">-85dp</dimen>
+    <dimen name="common_negative_32">-80dp</dimen>
+    <dimen name="common_negative_30">-75dp</dimen>
+    <dimen name="common_negative_28">-70dp</dimen>
+    <dimen name="common_negative_26">-65dp</dimen>
     <dimen name="text_2">5sp</dimen>
     <dimen name="text_4">10sp</dimen>
     <dimen name="text_6">15sp</dimen>

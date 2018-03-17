@@ -412,6 +412,7 @@ public abstract class AbstractChartView extends View implements Chart {
     @Override
     public void setCurrentViewport(Viewport targetViewport) {
         if (null != targetViewport) {
+//            Log.e("", "target viewport is not null");
             chartRenderer.setCurrentViewport(targetViewport);
         }
         ViewCompat.postInvalidateOnAnimation(this);

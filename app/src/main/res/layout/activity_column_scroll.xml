@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.example.administrator.myapplication.column.ColumnScrollActivity">
+
+    <com.example.administrator.myapplication.column.ColumnScrollbar
+        android:id="@+id/scroll_bar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#dfcbad"
+        >
+
+        <com.example.administrator.myapplication.column.SleepScrollPicker
+            android:id="@+id/sleep_column"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:spv_is_circulation="false"
+            app:spv_alignment="center"
+            app:spv_disallow_intercept_touch="true"
+            />
+    </LinearLayout>
+</LinearLayout>

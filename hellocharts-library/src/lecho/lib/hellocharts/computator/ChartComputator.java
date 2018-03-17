@@ -3,7 +3,6 @@ package lecho.lib.hellocharts.computator;
 import android.graphics.Point;
 import android.graphics.PointF;
 import android.graphics.Rect;
-import android.util.Log;
 
 import lecho.lib.hellocharts.listener.DummyVieportChangeListener;
 import lecho.lib.hellocharts.listener.ViewportChangeListener;
@@ -78,7 +77,7 @@ public class ChartComputator {
      * Checks if new viewport doesn't exceed max available viewport.
      */
     public void constrainViewport(float left, float top, float right, float bottom) {
-        Log.e("TAG", "before left : " + left + " top : " + top + " right : " + right + " bottom : " + bottom);
+//        Log.e("TAG", "before left : " + left + " top : " + top + " right : " + right + " bottom : " + bottom);
         if (right - left < minViewportWidth) {
             // Minimum width - constrain horizontal zoom!
             right = left + minViewportWidth;
@@ -107,7 +106,7 @@ public class ChartComputator {
         currentViewport.top = Math.min(maxViewport.top, top);
         currentViewport.right = Math.min(maxViewport.right, right);
         currentViewport.bottom = Math.max(maxViewport.bottom, bottom);
-        Log.e("TAG","currentViewport : "+currentViewport.toString());
+//        Log.e("TAG","currentViewport : "+currentViewport.toString());
         viewportChangeListener.onViewportChanged(currentViewport);
     }
 
